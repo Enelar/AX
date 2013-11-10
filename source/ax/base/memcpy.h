@@ -52,12 +52,16 @@
  **
  *******************************************************************/
 
+/*
 #ifdef __cplusplus
 extern "C" {
 #endif
+*/
 
 void *ax_memcpy(void *dest, const void *src, size_t count);
 
+/*
 #ifdef __cplusplus
 }
 #endif
+*/

@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="def">
+      <UniqueIdentifier>{ffe4ec01-79e8-443c-a8da-bb9dfcde530d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="def\base">
+      <UniqueIdentifier>{1c300f7a-63d0-4d30-bf6b-fa8a82c24b33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="def\base\src">
+      <UniqueIdentifier>{5faea305-7bfa-47d7-af98-70fcd110cab0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="def\memory">
+      <UniqueIdentifier>{73bd0020-e4ac-4e08-9edd-dd2564fea3fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="def\memory\src">
+      <UniqueIdentifier>{3c0006eb-8424-4dbf-856c-edad3e92eba3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="def\structs">
+      <UniqueIdentifier>{9a6686f7-396a-4e3a-b600-10f254dfb4d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="def\units">
+      <UniqueIdentifier>{f68e9431-c82f-4b4e-b73e-478a9b7eb42c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="def\tl4">
+      <UniqueIdentifier>{ea402899-e8df-4bc8-a82b-fe4ad1afe858}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="def\tl4\con">
+      <UniqueIdentifier>{722a8311-5499-4e63-b14d-e44b1635d4f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="def\tl4\sys">
+      <UniqueIdentifier>{2582e99e-9ea8-4b45-be27-b65cd10e0cb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="def\tl4\mes">
+      <UniqueIdentifier>{1a758be8-e1d8-48be-8496-71617d1ea7a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="def\tl4\port">
+      <UniqueIdentifier>{728dc7e2-8f57-4f7c-86cf-9ebf0d5babfd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="def\tl4\net">
+      <UniqueIdentifier>{ba4ca8a1-a23b-41bc-bc5a-823ba5c67d82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="def\tl4\net\con">
+      <UniqueIdentifier>{e696e7dd-bea0-4b65-bc1f-2d1a4fc6e1a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="def\tl4\low">
+      <UniqueIdentifier>{87c2f459-7039-45b5-9834-9905e44fbaff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="def\stream">
+      <UniqueIdentifier>{fe0c214b-910d-4792-a064-8bbc99c6a910}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="def\stream\abstract">
+      <UniqueIdentifier>{9308fefe-80e4-40d7-a1b0-df0997071e9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="def\stream\abstract\src">
+      <UniqueIdentifier>{d0801b1f-5e6d-4783-999f-b5021c86c880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="def\stream\src">
+      <UniqueIdentifier>{e454091d-63c1-474f-b8e3-a277e3d6b311}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="def\stream\old">
+      <UniqueIdentifier>{e5328ea0-c087-4ca7-a9ad-0e83a9922b6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="def\stream\simple">
+      <UniqueIdentifier>{9f837778-4a12-4d6e-a15e-e07c4d971eef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="def\stream\applied">
+      <UniqueIdentifier>{842f27e6-8dd3-4d9d-b53c-b6f3723a89a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="def\threads">
+      <UniqueIdentifier>{c7bb5b15-df26-4c9c-96fb-cc12262b661d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="def\threads\mutex">
+      <UniqueIdentifier>{385c9d48-0e2d-45f7-8a4e-ebeb98730058}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="def\threads\mutex\src">
+      <UniqueIdentifier>{634f003e-8724-41b5-b54d-dc3e53cf3864}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="def\threads\mutex\os">
+      <UniqueIdentifier>{06171b57-a228-4f3b-ad81-19f73c66b74b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="def\threads\talk">
+      <UniqueIdentifier>{cc0e3bb6-b0b8-4659-90fc-4d5549f5efcc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="def\threads\src">
+      <UniqueIdentifier>{8a5a9c9d-ac31-431e-87d7-59b13e074a9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="outsource">
+      <UniqueIdentifier>{ab08fe42-8243-4b78-acb4-c072a8502cc7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ax\base\assert.h">
+      <Filter>def\base</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\def.h">
+      <Filter>def\base</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\base\exceptions.h">
+      <Filter>def\base</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\base\memcpy.h">
+      <Filter>def\base</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\base\types.h">
+      <Filter>def\base</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\base\utils.h">
+      <Filter>def\base</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\memory\fast_mem.h">
+      <Filter>def\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\memory\fast_offset_mem.h">
+      <Filter>def\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\memory\mem.h">
+      <Filter>def\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\memory\mem_block.h">
+      <Filter>def\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\memory\mem_sys.h">
+      <Filter>def\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\memory\parent_block.h">
+      <Filter>def\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\memory\slow_mem.h">
+      <Filter>def\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\structs\array.h">
+      <Filter>def\structs</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\structs\buffer.h">
+      <Filter>def\structs</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\structs\hash.h">
+      <Filter>def\structs</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\structs\local_db.h">
+      <Filter>def\structs</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\structs\round_array.h">
+      <Filter>def\structs</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\structs\singletone.h">
+      <Filter>def\structs</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\units\timestamp.h">
+      <Filter>def\units</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\units\toggle.h">
+      <Filter>def\units</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\tl4\tl4.h">
+      <Filter>def\tl4</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\tl4\conn\tl4_connection.h">
+      <Filter>def\tl4\con</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\tl4\conn\tl4c_system.h">
+      <Filter>def\tl4\con</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\tl4\sys\tl4_def.h">
+      <Filter>def\tl4\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\tl4\sys\tl4_status.h">
+      <Filter>def\tl4\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\tl4\sys\tl4_storage.h">
+      <Filter>def\tl4\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\tl4\mes\tl4_crypt.h">
+      <Filter>def\tl4\mes</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\tl4\mes\tl4_default.h">
+      <Filter>def\tl4\mes</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\tl4\mes\tl4_serial.h">
+      <Filter>def\tl4\mes</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\tl4\mes\tl4_translator.h">
+      <Filter>def\tl4\mes</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\tl4\port\tl4_port.h">
+      <Filter>def\tl4\port</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\tl4\port\tl4p_system.h">
+      <Filter>def\tl4\port</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\tl4\net\tl4_network.h">
+      <Filter>def\tl4\net</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\tl4\net\resp_con\tl4nr_connection.h">
+      <Filter>def\tl4\net\con</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\tl4\low\tl4_low.h">
+      <Filter>def\tl4\low</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\stream\abstract\abstract_duct.h">
+      <Filter>def\stream\abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\stream\abstract\abstract_pull.h">
+      <Filter>def\stream\abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\stream\abstract\abstract_push.h">
+      <Filter>def\stream\abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\stream\abstract\iendpoint.h">
+      <Filter>def\stream\abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\stream\abstract\oendpoint.h">
+      <Filter>def\stream\abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\stream\abstract\stream_base.h">
+      <Filter>def\stream\abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\stream\stream.h">
+      <Filter>def\stream\old</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\stream\stream_l2n.h">
+      <Filter>def\stream\old</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\stream\stream_pipe.h">
+      <Filter>def\stream\old</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\stream\stream_pump.h">
+      <Filter>def\stream\old</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\stream\duct.h">
+      <Filter>def\stream\simple</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\stream\pull.h">
+      <Filter>def\stream\simple</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\stream\push.h">
+      <Filter>def\stream\simple</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\stream\tube.h">
+      <Filter>def\stream\simple</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\stream\applied\pipe.h">
+      <Filter>def\stream\applied</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\stream\applied\pipe_constructor.h">
+      <Filter>def\stream\applied</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\threads\lock.h">
+      <Filter>def\threads</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\threads\thread.h">
+      <Filter>def\threads</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\threads\thread_controller.h">
+      <Filter>def\threads</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\threads\lock\abstract_mutex.h">
+      <Filter>def\threads\mutex</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\threads\lock\mutex.h">
+      <Filter>def\threads\mutex</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\threads\lock\mutex_fabric.h">
+      <Filter>def\threads\mutex</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\threads\lock\windows_mutex.h">
+      <Filter>def\threads\mutex\os</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\threads\talk.h">
+      <Filter>def\threads\talk</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\outsource\memcpy.h">
+      <Filter>outsource</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ax\base\exceptions.cpp">
+      <Filter>def\base\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\base\memmove.cpp">
+      <Filter>def\base\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\base\types.cpp">
+      <Filter>def\base\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\base\utils.cpp">
+      <Filter>def\base\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\memory\fast_mem.cpp">
+      <Filter>def\memory\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\memory\fast_offset_mem.cpp">
+      <Filter>def\memory\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\memory\mem.cpp">
+      <Filter>def\memory\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\memory\mem_block.cpp">
+      <Filter>def\memory\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\memory\parent_block.cpp">
+      <Filter>def\memory\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\memory\slow_mem.cpp">
+      <Filter>def\memory\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\structs\buffer.cpp">
+      <Filter>def\structs</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\structs\buffer_raw.cpp">
+      <Filter>def\structs</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\structs\buffer_raw_back.cpp">
+      <Filter>def\structs</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\units\timestamp.cpp">
+      <Filter>def\units</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\units\toggle.cpp">
+      <Filter>def\units</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\tl4\tl4.cpp">
+      <Filter>def\tl4</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\tl4\conn\tl4_connection.cpp">
+      <Filter>def\tl4\con</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\tl4\conn\tl4c_system.cpp">
+      <Filter>def\tl4\con</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\tl4\mes\tl4_crypt.cpp">
+      <Filter>def\tl4\mes</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\tl4\port\tl4p_system.cpp">
+      <Filter>def\tl4\port</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\tl4\net\tl4_network.cpp">
+      <Filter>def\tl4\net</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\tl4\net\tl4n_connection.cpp">
+      <Filter>def\tl4\net</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\tl4\net\tl4n_response.cpp">
+      <Filter>def\tl4\net</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\tl4\net\resp_con\tl4nr_connection.cpp">
+      <Filter>def\tl4\net\con</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\tl4\net\resp_con\tl4nrc_connect.cpp">
+      <Filter>def\tl4\net\con</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\tl4\net\resp_con\tl4nrc_resolve.cpp">
+      <Filter>def\tl4\net\con</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\tl4\low\_w_tl4_low.cpp">
+      <Filter>def\tl4\low</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\stream\abstract\iendpoint.cpp">
+      <Filter>def\stream\abstract\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\stream\abstract\oendpoint.cpp">
+      <Filter>def\stream\abstract\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\stream\duct.cpp">
+      <Filter>def\stream\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\stream\stream.cpp">
+      <Filter>def\stream\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\stream\stream_pipe.cpp">
+      <Filter>def\stream\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\stream\applied\pipe_constructor.cpp">
+      <Filter>def\stream\applied</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\threads\thread.cpp">
+      <Filter>def\threads</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\threads\lock\mutex_fabric.cpp">
+      <Filter>def\threads\mutex\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\outsource\memcpy.c">
+      <Filter>outsource</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\base\memcpy.cpp">
+      <Filter>def\base\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="tests">
+      <UniqueIdentifier>{c2fb1939-e18f-412e-b781-dda9ceb56801}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\memory">
+      <UniqueIdentifier>{0b5ab038-d2ef-4920-9b4b-35f483315842}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests\tl4">
+      <UniqueIdentifier>{443090f2-e05b-4595-8f24-5df3683c328a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="memory\fast_memory_alloc_dealloc.cpp">
+      <Filter>tests\memory</Filter>
+    </ClCompile>
+    <ClCompile Include="memory\fast_memory_copying.cpp">
+      <Filter>tests\memory</Filter>
+    </ClCompile>
+    <ClCompile Include="memory\mem_tests.cpp">
+      <Filter>tests\memory</Filter>
+    </ClCompile>
+    <ClCompile Include="tl4\connection_open.cpp">
+      <Filter>tests\tl4</Filter>
+    </ClCompile>
+    <ClCompile Include="tl4\network_create.cpp">
+      <Filter>tests\tl4</Filter>
+    </ClCompile>
+    <ClCompile Include="tl4\tl4_tests.cpp">
+      <Filter>tests\tl4</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="memory\mem_tests.h">
+      <Filter>tests\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="tl4\tl4_tests.h">
+      <Filter>tests\tl4</Filter>
+    </ClInclude>
+    <ClInclude Include="head.h" />
+  </ItemGroup>
+</Project>

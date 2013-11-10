@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{792C27E3-863B-434C-A47A-F5F0515BFB20}</ProjectGuid>
+    <RootNamespace>AX</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(ProjectDir)..\build\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)..\intermediate\$(ProjectName)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(ProjectDir)..\build\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)..\intermediate\$(ProjectName)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <ShowIncludes>false</ShowIncludes>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(ProjectName)_$(Configuration).lib</OutputFile>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(ProjectName)_$(Configuration).lib</OutputFile>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="ax\base\assert.h" />
+    <ClInclude Include="ax\def.h" />
+    <ClInclude Include="ax\base\exceptions.h" />
+    <ClInclude Include="ax\base\memcpy.h" />
+    <ClInclude Include="ax\base\types.h" />
+    <ClInclude Include="ax\base\utils.h" />
+    <ClInclude Include="ax\memory\fast_mem.h" />
+    <ClInclude Include="ax\memory\fast_offset_mem.h" />
+    <ClInclude Include="ax\memory\mem.h" />
+    <ClInclude Include="ax\memory\mem_block.h" />
+    <ClInclude Include="ax\memory\mem_sys.h" />
+    <ClInclude Include="ax\memory\parent_block.h" />
+    <ClInclude Include="ax\memory\slow_mem.h" />
+    <ClInclude Include="ax\structs\array.h" />
+    <ClInclude Include="ax\structs\buffer.h" />
+    <ClInclude Include="ax\structs\hash.h" />
+    <ClInclude Include="ax\structs\local_db.h" />
+    <ClInclude Include="ax\structs\round_array.h" />
+    <ClInclude Include="ax\structs\singletone.h" />
+    <ClInclude Include="ax\units\timestamp.h" />
+    <ClInclude Include="ax\units\toggle.h" />
+    <ClInclude Include="ax\tl4\tl4.h" />
+    <ClInclude Include="ax\tl4\conn\tl4_connection.h" />
+    <ClInclude Include="ax\tl4\conn\tl4c_system.h" />
+    <ClInclude Include="ax\tl4\sys\tl4_def.h" />
+    <ClInclude Include="ax\tl4\sys\tl4_status.h" />
+    <ClInclude Include="ax\tl4\sys\tl4_storage.h" />
+    <ClInclude Include="ax\tl4\mes\tl4_crypt.h" />
+    <ClInclude Include="ax\tl4\mes\tl4_default.h" />
+    <ClInclude Include="ax\tl4\mes\tl4_serial.h" />
+    <ClInclude Include="ax\tl4\mes\tl4_translator.h" />
+    <ClInclude Include="ax\tl4\port\tl4_port.h" />
+    <ClInclude Include="ax\tl4\port\tl4p_system.h" />
+    <ClInclude Include="ax\tl4\net\tl4_network.h" />
+    <ClInclude Include="ax\tl4\net\resp_con\tl4nr_connection.h" />
+    <ClInclude Include="ax\tl4\low\tl4_low.h" />
+    <ClInclude Include="ax\stream\abstract\abstract_duct.h" />
+    <ClInclude Include="ax\stream\abstract\abstract_pull.h" />
+    <ClInclude Include="ax\stream\abstract\abstract_push.h" />
+    <ClInclude Include="ax\stream\abstract\iendpoint.h" />
+    <ClInclude Include="ax\stream\abstract\oendpoint.h" />
+    <ClInclude Include="ax\stream\abstract\stream_base.h" />
+    <ClInclude Include="ax\stream\stream.h" />
+    <ClInclude Include="ax\stream\stream_l2n.h" />
+    <ClInclude Include="ax\stream\stream_pipe.h" />
+    <ClInclude Include="ax\stream\stream_pump.h" />
+    <ClInclude Include="ax\stream\duct.h" />
+    <ClInclude Include="ax\stream\pull.h" />
+    <ClInclude Include="ax\stream\push.h" />
+    <ClInclude Include="ax\stream\tube.h" />
+    <ClInclude Include="ax\stream\applied\pipe.h" />
+    <ClInclude Include="ax\stream\applied\pipe_constructor.h" />
+    <ClInclude Include="ax\threads\lock.h" />
+    <ClInclude Include="ax\threads\thread.h" />
+    <ClInclude Include="ax\threads\thread_controller.h" />
+    <ClInclude Include="ax\threads\lock\abstract_mutex.h" />
+    <ClInclude Include="ax\threads\lock\mutex.h" />
+    <ClInclude Include="ax\threads\lock\mutex_fabric.h" />
+    <ClInclude Include="ax\threads\lock\windows_mutex.h" />
+    <ClInclude Include="ax\threads\talk.h" />
+    <ClInclude Include="ax\outsource\memcpy.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ax\base\exceptions.cpp" />
+    <ClCompile Include="ax\base\memcpy.cpp" />
+    <ClCompile Include="ax\base\memmove.cpp" />
+    <ClCompile Include="ax\base\types.cpp" />
+    <ClCompile Include="ax\base\utils.cpp" />
+    <ClCompile Include="ax\memory\fast_mem.cpp" />
+    <ClCompile Include="ax\memory\fast_offset_mem.cpp" />
+    <ClCompile Include="ax\memory\mem.cpp" />
+    <ClCompile Include="ax\memory\mem_block.cpp" />
+    <ClCompile Include="ax\memory\parent_block.cpp" />
+    <ClCompile Include="ax\memory\slow_mem.cpp" />
+    <ClCompile Include="ax\structs\buffer.cpp" />
+    <ClCompile Include="ax\structs\buffer_raw.cpp" />
+    <ClCompile Include="ax\structs\buffer_raw_back.cpp" />
+    <ClCompile Include="ax\units\timestamp.cpp" />
+    <ClCompile Include="ax\units\toggle.cpp" />
+    <ClCompile Include="ax\tl4\tl4.cpp" />
+    <ClCompile Include="ax\tl4\conn\tl4_connection.cpp" />
+    <ClCompile Include="ax\tl4\conn\tl4c_system.cpp" />
+    <ClCompile Include="ax\tl4\mes\tl4_crypt.cpp" />
+    <ClCompile Include="ax\tl4\port\tl4p_system.cpp" />
+    <ClCompile Include="ax\tl4\net\tl4_network.cpp" />
+    <ClCompile Include="ax\tl4\net\tl4n_connection.cpp" />
+    <ClCompile Include="ax\tl4\net\tl4n_response.cpp" />
+    <ClCompile Include="ax\tl4\net\resp_con\tl4nr_connection.cpp" />
+    <ClCompile Include="ax\tl4\net\resp_con\tl4nrc_connect.cpp" />
+    <ClCompile Include="ax\tl4\net\resp_con\tl4nrc_resolve.cpp" />
+    <ClCompile Include="ax\tl4\low\_w_tl4_low.cpp" />
+    <ClCompile Include="ax\stream\abstract\iendpoint.cpp" />
+    <ClCompile Include="ax\stream\abstract\oendpoint.cpp" />
+    <ClCompile Include="ax\stream\duct.cpp" />
+    <ClCompile Include="ax\stream\stream.cpp" />
+    <ClCompile Include="ax\stream\stream_pipe.cpp" />
+    <ClCompile Include="ax\stream\applied\pipe_constructor.cpp" />
+    <ClCompile Include="ax\threads\thread.cpp" />
+    <ClCompile Include="ax\threads\lock\mutex_fabric.cpp" />
+    <ClCompile Include="ax\outsource\memcpy.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>

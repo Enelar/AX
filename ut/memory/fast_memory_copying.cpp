@@ -1,4 +1,4 @@
-#include <ax/memory/mem.h>
+#include "../../source/ax/memory/mem.h"
 #include "mem_tests.h"
 
 using namespace ut;
