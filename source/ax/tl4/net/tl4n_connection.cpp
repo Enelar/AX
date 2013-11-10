@@ -6,7 +6,7 @@
 using namespace ax::tl4;
 using namespace ax::structs;
 
-connection network::OpenConnection( const dword ip, const word port,
+connection network::OpenConnection( const word ip, const hword port,
   crypt *en, crypt *de, outcome_translator *ot, income_translator *it,
    tl4_listener_disc on_disc, tl4_listener_inc_mes on_mes )
 {

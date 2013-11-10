@@ -39,13 +39,13 @@ namespace
     }
   } aaa;
 #endif
-  void CloseSocket( unsafe_dword &s )
+  void CloseSocket( unsafe_word &s )
   {
     shutdown(s, SD_BOTH);
     closesocket(s);
   }
 
-  bool CreateSocket( unsafe_dword &s )
+  bool CreateSocket( unsafe_word &s )
   {
     if (s != INVALID_SOCKET)
       return true;
@@ -62,7 +62,7 @@ namespace
   }
 }
 
-LOW_STATUSES low::GetIp( const char * const addr, unsafe_dword &ip )
+LOW_STATUSES low::GetIp( const char * const addr, unsafe_word &ip )
 {
   hostent *a = gethostbyname(reinterpret_cast<const char *>(addr));
   if (a == NULL)
@@ -74,8 +74,8 @@ LOW_STATUSES low::GetIp( const char * const addr, unsafe_dword &ip )
   return SUCCESS;
 }
 
-LOW_STATUSES low::Connect( unsafe_dword &s, 
-                          unsafe_dword addr, const unsafe_word port )
+LOW_STATUSES low::Connect( unsafe_word &s, 
+                          unsafe_word addr, const unsafe_hword port )
 {
   if (!CreateSocket(s))
     return CANT_CREATE_SOCKET;
@@ -96,7 +96,7 @@ LOW_STATUSES low::Connect( unsafe_dword &s,
   return SUCCESS;
 }
 
-LOW_STATUSES low::Send( const unsafe_dword s, const unsafe_byte *buff, const word size )
+LOW_STATUSES low::Send( const unsafe_word s, const unsafe_byte *buff, const hword size )
 {
   if (s == _TL4_NOT_SOCKET_ || buff == NULL)
     throw_message("Low level protect");
@@ -120,7 +120,7 @@ LOW_STATUSES low::Send( const unsafe_dword s, const unsafe_byte *buff, const wor
   return SUCCESS;
 }
 
-LOW_STATUSES low::Recieve( const unsafe_dword  s, byte *const buff, word &readed, word size )
+LOW_STATUSES low::Recieve( const unsafe_word  s, byte *const buff, hword &readed, hword size )
 {
   if (s == _TL4_NOT_SOCKET_ || buff == NULL)
     throw_message("Low level protect");
@@ -160,7 +160,7 @@ LOW_STATUSES low::Recieve( const unsafe_dword  s, byte *const buff, word &readed
   return SUCCESS;
 }
 
-LOW_STATUSES low::Close( unsafe_dword &s )
+LOW_STATUSES low::Close( unsafe_word &s )
 {
   if (s == _TL4_NOT_SOCKET_)
     throw_message("Low level protect");
@@ -170,8 +170,8 @@ LOW_STATUSES low::Close( unsafe_dword &s )
   return SUCCESS;
 }
 
-LOW_STATUSES low::Open( unsafe_dword &s, 
-                       const unsafe_word port, const unsafe_word max_connections )
+LOW_STATUSES low::Open( unsafe_word &s, 
+                       const unsafe_hword port, const unsafe_hword max_connections )
 {
   if (!CreateSocket(s))
     return CANT_CREATE_SOCKET;
@@ -190,11 +190,11 @@ LOW_STATUSES low::Open( unsafe_dword &s,
   return SUCCESS;
 }
 
-udw low::Accept( const unsafe_dword s, unsafe_dword &ip, unsafe_word &port )
+uw low::Accept( const unsafe_word s, unsafe_word &ip, unsafe_hword &port )
 {
   struct sockaddr_in a;
   int size = sizeof(a);
-  udw res = (udw)accept(s, (struct sockaddr *)&a, &size);
+  uw res = (uw)accept(s, (struct sockaddr *)&a, &size);
   if (res != INVALID_SOCKET)
   {
     ip = a.sin_addr.S_un.S_addr;
@@ -206,8 +206,8 @@ udw low::Accept( const unsafe_dword s, unsafe_dword &ip, unsafe_word &port )
   return _TL4_NOT_SOCKET_;
 }
 
-LOW_STATUSES low::SetBacklog( const unsafe_dword socket, 
-                             const unsafe_word max_connections )
+LOW_STATUSES low::SetBacklog( const unsafe_word socket, 
+                             const unsafe_hword max_connections )
 {
   if (listen(socket, max_connections))
   {

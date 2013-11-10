@@ -12,7 +12,7 @@ connection_response::connection_response( storage *const s ) : store(s)
 
 void connection_response::ProcessAllConnections( const ax::units::timestamp &t )
 {
-  dword i = 0, s = store->con.GetSize();
+  word i = 0, s = store->con.GetSize();
   while (i < s)
   {
     system_connection *cp = store->con(i);

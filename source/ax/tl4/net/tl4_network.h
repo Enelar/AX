@@ -34,7 +34,7 @@ namespace ax
       void Response( const ax::units::timestamp &t );
       dword GetConnectionsCount() const;
       port OpenPort( const word port, const tl4_inc_con_maker inc_maker, ax::units::timestamp &ot, tl4_listener_client_disc od = NULL, tl4_listener_inc_con ic = NULL );
-      connection OpenConnection( const dword ip, const word port,
+      connection OpenConnection( const word ip, const hword port,
         crypt *en = NULL, crypt *de = NULL,
         outcome_translator *ot = NULL, income_translator *it = NULL,
         tl4_listener_disc on_disc = NULL, tl4_listener_inc_mes on_mes = NULL );

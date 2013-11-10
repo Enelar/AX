@@ -31,27 +31,27 @@ namespace ax
       friend class network;
       friend class connection_response;
 
-      static LOW_STATUSES Connect( unsafe_dword &socket,
-        const unsafe_dword addr, const unsafe_word port );
+      static LOW_STATUSES Connect( unsafe_word &socket,
+        const unsafe_word addr, const unsafe_hword port );
 
-      static LOW_STATUSES Send( const unsafe_dword  socket, 
-        const unsafe_byte *const buff, const word size );
+      static LOW_STATUSES Send( const unsafe_word  socket, 
+        const unsafe_byte *const buff, const hword size );
 
-      static LOW_STATUSES Recieve( const unsafe_dword socket, 
-        unsafe_byte *const buff, word &readed, word read = _TL4_DATA_SEGMENT_SIZE );
+      static LOW_STATUSES Recieve( const unsafe_word socket, 
+        unsafe_byte *const buff, hword &readed, hword read = _TL4_DATA_SEGMENT_SIZE );
 
-      static LOW_STATUSES Close( unsafe_dword &socket );
+      static LOW_STATUSES Close( unsafe_word &socket );
 
-      static LOW_STATUSES Open( unsafe_dword &socket, 
-        const unsafe_word port, const unsafe_word max_connections );
+      static LOW_STATUSES Open( unsafe_word &socket, 
+        const unsafe_hword port, const unsafe_hword max_connections );
 
-      static LOW_STATUSES GetIp( const char * const addr, unsafe_dword &ip );
+      static LOW_STATUSES GetIp( const char * const addr, unsafe_word &ip );
 
-      static LOW_STATUSES SetBacklog( const unsafe_dword socket, 
-        const unsafe_word max_connections );
+      static LOW_STATUSES SetBacklog( const unsafe_word socket, 
+        const unsafe_hword max_connections );
 
-      static udw Accept( const unsafe_dword socket, 
-        unsafe_dword &ip, unsafe_word &port );
+      static uw Accept( const unsafe_word socket, 
+        unsafe_word &ip, unsafe_hword &port );
     };
   };
 };
