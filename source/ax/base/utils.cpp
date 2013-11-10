@@ -20,16 +20,6 @@ void ax::MemCpy( void *const destination, const void *const source, const sst le
 sst ax::StrLen( const char *const str )
 {
   return strlen(str);
-  /*
-  usst ret, s;
-  (*static_cast<usst **>(&s)) = reinterpret_cast<usst *>(const_cast<char *>(str));
-
-  _asm {
-    mov EAX, s
-  }
-
-  return ret;
-  */
 }
 
 sst ax::StrLenSafeFast( char *const str, const sst buf_size )
@@ -64,9 +54,23 @@ sst ax::StrMasqEq( const char *str, const char *mask )
 
 sst ax::StrFastCopy( char *&dest, const char * const source )
 {
-  throw_sassert(!dest, "Destination of string copy not empty");
+  throw_sassert(dest == nullptr, "Destination of StrFastCopy not empty");
   sst len = StrLen(source) + 1;
-  dest = NEW char[len];
-  MemCpy(dest, source, len);
+
+  struct dummy_smart_ptr
+  {
+    char *ptr;
+    dummy_smart_ptr() : ptr(nullptr)
+    {}
+    ~dummy_smart_ptr()
+    { 
+      if (ptr != nullptr)
+        delete []ptr;
+    }
+  } memory_guard;
+  memory_guard.ptr = NEW char[len];
+  MemCpy(memory_guard.ptr, source, len);
+  dest = memory_guard.ptr;
+  memory_guard.ptr = nullptr;
   return len - 1;
 }
