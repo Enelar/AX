@@ -6,23 +6,12 @@
 #ifndef _AX_EXCEPTIONS_H_
 #define _AX_EXCEPTIONS_H_
 
+DEPRECATED
 #ifdef _COMPILATOR_VC_
 #define EXCEPTION(x) throw x
-#else
-#define EXCEPTION(x) throw NEW x
 #endif
-
-#if _DEBUG_
-#define throw_assert(string) if (!(string)) EXCEPTION(ax::ax_exception("ASSERTION FAULT {" TOSTRING(string) "}", __FILE__, __LINE__)); else
-#else
-#define throw_assert(string) if (!(string)) EXCEPTION(ax::ax_exception(NULL, __FILE__, __LINE__)); else
-#endif
-
-#if _DEBUG_
-#define throw_sassert(cond, string) if (!(cond)) EXCEPTION(ax::ax_exception("ASSERTION FAULT {" string "}", __FILE__, __LINE__)); else
-#else
-#define throw_sassert(cond, string) if (!(cond)) EXCEPTION(ax::ax_exception(NULL, __FILE__, __LINE__)); else
-#endif
+#define TRY DEPRECATED try
+#define CATCH(t) DEPRECATED catch(t e)
 
 #if _DEBUG_
 #define throw_message(string) EXCEPTION(ax::ax_exception((string), __FILE__, __LINE__))
@@ -30,14 +19,19 @@
 #define throw_message(string) EXCEPTION(ax::ax_exception(NULL, __FILE__, __LINE__))
 #endif
 
+// Smart assert (with comment) //
+#define throw_sassert(cond, string) if (!(cond)) throw_message("ASSERTION FAULT {" string "}"); else
+// Regular assert
+#define throw_assert(string) throw_sassert(string, string)
+
 #if _DEBUG_
-#define todo(ToDoMessage) EXCEPTION(ax::ax_exception("TODO: " TOSTRING(ToDoMessage), __FILE__, __LINE__))
+#define todo(ToDoMessage) throw_message("TODO: " TOSTRING(ToDoMessage))
 #else
-#define todo(ToDoMessage) EXCEPTION(ax::ax_exception("This function coming soon. (TODO)" , __FILE__, __LINE__))
+#define todo(ToDoMessage) throw_message("This function coming soon. (TODO)")
 #endif
 
 #define dead_space() throw_message("Unexpected routeline")
-#define do_overload(func_with_full_namespace_address) throw_message("Overload not completed: " func_with_full_namespace_address);
+#define do_overload(func_with_full_namespace_address) throw_message("Overload not completed: " TOSTRING(func_with_full_namespace_address));
 
 
 namespace ax
