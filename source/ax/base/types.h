@@ -6,24 +6,55 @@
 #ifndef _AX_TYPES_H_
 #define _AX_TYPES_H_
 
-typedef unsigned __int64    unsafe_bword, ubwd;
-typedef unsigned int        unsafe_dword, uint, udw;
-typedef unsigned short       unsafe_word, uwd;
-typedef unsigned char        unsafe_byte, ub, byte;
-typedef int                   unsafe_int, ui;
-typedef __int64            unsafe_bigint, ubi;
-typedef size_t             usst;
+#ifndef _AX_FUNDAMENTAL_TYPES_BASED_ON_CPP_STANDART
+/*/ Cause typedef impelemtation bug:
+typedef __int8 test;
+typedef unsigned test a; // test redefinition
+===
+typedef __int8 test;
+typedef unsigned __int8 a; // ok
+//*/
+
+#define _ax_basic_byte_         __int8
+#define _ax_basic_half_word_    __int16
+#define _ax_basic_word_         __int32
+#define _ax_basic_double_word_  __int64
+#define _ax_basic_biggest_word_ __int64
+#else
+#define _ax_basic_byte_         char
+#define _ax_basic_half_word_    short
+#define _ax_basic_word_         int
+#define _ax_basic_double_word_  long long
+#define _ax_basic_biggest_word_ long long
+#endif
+
+typedef unsigned  _ax_basic_byte_         unsafe_byte, ub;
+typedef unsigned  _ax_basic_half_word_    unsafe_hword, uhw;
+typedef unsigned  _ax_basic_word_         unsafe_word, uwd, uw, uint;
+typedef unsigned  _ax_basic_double_word_  unsafe_dword, udw;
+typedef unsigned  _ax_basic_biggest_word_ unsafe_bword, ubw;
+typedef           _ax_basic_word_         unsafe_int, ui;
+typedef           _ax_basic_biggest_word_ unsafe_bigint, ubi;
+typedef           size_t                  usst;
 
 #define GETMAXCOUNT(BITS) ((unsafe_bword)1 << (BITS))
 #define GETMAXVALUE(BITS) (GETMAXCOUNT(BITS - 1) - 1 + GETMAXCOUNT(BITS - 1))
-#define BYTE_MAX GETMAXVALUE(8)
-#define WORD_MAX GETMAXVALUE(16)
-#define DWORD_MAX GETMAXVALUE(32)
-#define BWORD_MAX GETMAXVALUE(64)
+
 #define BITSINBYTE 8
 #define MAXVALUEBYTYPE(type) GETMAXVALUE(BITSINBYTE * sizeof(type))
 
-#if _DEBUG_
+#define BYTE_MAX  MAXVALUEBYTYPE(ub)
+#define HWORD_MAX MAXVALUEBYTYPE(uhw)
+#define WORD_MAX  MAXVALUEBYTYPE(uw)
+#define DWORD_MAX MAXVALUEBYTYPE(udw)
+#define BWORD_MAX MAXVALUEBYTYPE(ubw)
+
+// Warning, maybe bug!
+#define CIFRA_MAX     (MAXVALUEBYTYPE(ui) >> 1)
+#define BIGINT_MAX  (MAXVALUEBYTYPE(ubi) >> 1)
+
+//#if _DEBUG_
+#ifdef _DEPRECATED_DUE_REFACTOR_
 
 namespace ax
 {
@@ -266,6 +297,7 @@ const safe_constructor<type> operator/( const safe_constructor<type> &a, const s
 typedef unsafe_bword   bword;
 typedef unsafe_dword   dword;
 typedef unsafe_word     word;
+typedef unsafe_hword   hword;
 typedef unsafe_byte     byte;
 typedef unsafe_int     cifra;
 typedef unsafe_bigint bigint;
@@ -278,17 +310,20 @@ typedef usst             sst;
 namespace ax
 {
   void CheckTypes( void );
+
   class object
   {
   public:
     virtual ~object()
     {}
   };
+
   class copyable : public object
   {
   public:
     virtual copyable *Copy( void ) const = 0;
   };
+
   class shared : public object
   {
   protected:
@@ -299,6 +334,7 @@ namespace ax
     virtual void RemoveShare( );
     ~shared();
   };
+
   class shared_self_controlled : public shared
   {
   public:

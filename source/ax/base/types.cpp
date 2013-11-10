@@ -22,6 +22,10 @@ void ax::CheckTypes( void )
   byte b = ub;
   throw_sassert(b == BYTE_MAX, "Wrong max byte value! Unbelievable! Its impossible!");
 
+  unsafe_hword uhw = -1;
+  hword hw = uhw;
+  throw_sassert(hw == HWORD_MAX, "Wrong max word value! Unbelievable! Its impossible!");
+
   unsafe_word uw = -1;
   word w = uw;
   throw_sassert(w == WORD_MAX, "Wrong max word value! Unbelievable! Its impossible!");
@@ -34,25 +38,37 @@ void ax::CheckTypes( void )
   bword bw = ubw;
   throw_sassert(bw == BWORD_MAX, "Wrong max bword value! Unbelievable! Its impossible!");
 
+  unsafe_int ui = ~0; // should test
+  cifra i = ui;
+  throw_sassert(i == CIFRA_MAX, "Wrong max cifra value! Unbelievable! Its impossible!");
+
+  unsafe_bigint ubi = ~0; // should test
+  bigint bi = ubi;
+  throw_sassert(bi == BIGINT_MAX, "Wrong max bigint value! Unbelievable! Its impossible!")
+
   checked = 1;
 }
 
 shared::shared() : users(0)
 {
 }
+
 void shared::AddShare( )
 {
   ++users;
 }
+
 void shared::RemoveShare( )
 {
   throw_assert(users);
   --users;
 }
+
 shared::~shared()
 {
   throw_assert(!users);
 }
+
 void shared_self_controlled::RemoveShare( )
 {
   shared::RemoveShare();
