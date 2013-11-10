@@ -70,7 +70,7 @@ LOW_STATUSES low::GetIp( const char * const addr, unsafe_word &ip )
     ip = _TL4_NOT_IP_;
     return CANT_RESOLVE_IP;
   }
-  ip = *(dword *)a->h_addr_list[0];
+  ip = *(word *)a->h_addr_list[0];
   return SUCCESS;
 }
 
