@@ -57,20 +57,14 @@ sst ax::StrFastCopy( char *&dest, const char * const source )
   throw_sassert(dest == nullptr, "Destination of StrFastCopy not empty");
   sst len = StrLen(source) + 1;
 
-  struct dummy_smart_ptr
+  try
   {
-    char *ptr;
-    dummy_smart_ptr() : ptr(nullptr)
-    {}
-    ~dummy_smart_ptr()
-    { 
-      if (ptr != nullptr)
-        delete []ptr;
-    }
-  } memory_guard;
-  memory_guard.ptr = NEW char[len];
-  MemCpy(memory_guard.ptr, source, len);
-  dest = memory_guard.ptr;
-  memory_guard.ptr = nullptr;
-  return len - 1;
+    dest = NEW char[len];
+    MemCpy(dest, source, len);
+    return len - 1;
+  } catch (...)
+  {
+    delete []dest;
+    throw;
+  }
 }

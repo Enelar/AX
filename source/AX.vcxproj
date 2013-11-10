@@ -188,6 +188,9 @@
     <ClCompile Include="ax\threads\thread.cpp" />
     <ClCompile Include="ax\threads\lock\mutex_fabric.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="ax\ax" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
     <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
