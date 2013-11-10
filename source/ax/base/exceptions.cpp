@@ -25,13 +25,16 @@ namespace
   }
 };
 
+/*/
+DEPRECATED
 void ax_exception::InitStrings( const int i, const char *const f )
 {
   char str[100];
   sprintf_s(str, 100, "Error code: %i", i);
   InitStrings(str, f);
-}
+} //*/
 
+/*/
 void ax_exception::InitStrings( const char *const str, const char *const f )
 {
   word size;
@@ -41,26 +44,18 @@ void ax_exception::InitStrings( const char *const str, const char *const f )
   MemCpy(file, f, size);
   if (global_filename_replacer)
     global_filename_replacer(file, Replace);
-}
+} //*/
 
-ax_exception::ax_exception( ax_exception &a ) : line(a.line), time(a.time)
-{
-  InitStrings(a.string, a.file);
-}
 
 ax_exception::~ax_exception( void )
 {
-  if (string)
-    delete string;
-  if (file)
-    delete file;
 }
 
-const char *const ax_exception::GetString( void ) const
+const std::string &ax_exception::GetString( void ) const
 {
   return string;
 }
-const char *const ax_exception::GetFile( void ) const
+const std::string &ax_exception::GetFile( void ) const
 {
   return file;
 }

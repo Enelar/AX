@@ -7,7 +7,7 @@
 #define _AX_EXCEPTIONS_H_
 
 DEPRECATED
-#ifdef _COMPILATOR_VC_
+#ifndef _COMPILATOR_VC_
 #define EXCEPTION(x) throw x
 #endif
 #define TRY DEPRECATED try
@@ -22,7 +22,7 @@ DEPRECATED
 // Smart assert (with comment) //
 #define throw_sassert(cond, string) if (!(cond)) throw_message("ASSERTION FAULT {" string "}"); else
 // Regular assert
-#define throw_assert(string) throw_sassert(string, string)
+#define throw_assert(string) throw_sassert((string), TOSTRING(string))
 
 #if _DEBUG_
 #define todo(ToDoMessage) throw_message("TODO: " TOSTRING(ToDoMessage))
@@ -34,6 +34,7 @@ DEPRECATED
 #define do_overload(func_with_full_namespace_address) throw_message("Overload not completed: " TOSTRING(func_with_full_namespace_address));
 
 
+#include <string>
 namespace ax
 {
   class ax_exception;
@@ -42,29 +43,40 @@ namespace ax
   typedef void (*cut_filename)( char *&filename, replace_string_begin callback );
   class ax_exception
   {
-    char *string;
-    char *file;
-    const int line;
-    const int time;
+    std::string string, file;
+    const unsigned int line, time;
+
+    ax_exception(const std::string _string, const std::string _file, const unsigned int _line)
+      : string(_string), file(_file), line(_line), time(0)
+    {
+    }
   protected:
     virtual bool CallExceptionHandler( void );
-    virtual void InitStrings( const char *const str, const char *const f );
-    virtual void InitStrings( const int i, const char *const f );
   public:
-    ax_exception( const int i, const char *const f, const int l ) : line(l), time(0)
+    /*/
+    DEPRECATED
+    ax_exception( const int i, const char *const f, const int l )
     {
+      todo(Init with error code as int)
       InitStrings(i, f);
-    }
-    ax_exception( const char *const str, const char *const f, const int l ) : line(l), time(0)
+    } //*/
+
+    ax_exception( const char *const str, const char *const f, const int l )
+      : ax_exception(std::string(str), std::string(f), l)
     {
-      InitStrings(str, f);
     }
-    ax_exception( ax_exception &a );
+    ax_exception( ax_exception &a )
+      : string(a.string), file(a.file), line(a.line), time(a.time)
+    {
+    }
+
     ~ax_exception( void );
-    virtual const char *const GetString( void ) const;
-    virtual const char *const GetFile( void ) const;
+
+    virtual const std::string &GetString( void ) const;
+    virtual const std::string &GetFile( void ) const;
     virtual const int GetLine( void ) const;
     virtual const int GetTime( void ) const;
+
     static exception_handler global_handler;
     static cut_filename global_filename_replacer;
   };
