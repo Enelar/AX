@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE abiword PUBLIC "-//ABISOURCE//DTD AWML 1.0 Strict//EN" "http://www.abisource.com/awml.dtd">
+<abiword template="false" styles="unlocked" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:math="http://www.w3.org/1998/Math/MathML" xid-max="167" xmlns:dc="http://purl.org/dc/elements/1.1/" fileformat="1.1" xmlns:svg="http://www.w3.org/2000/svg" xmlns:awml="http://www.abisource.com/awml.dtd" xmlns="http://www.abisource.com/awml.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.9.1" xml:space="preserve" props="dom-dir:ltr; document-footnote-restart-section:0; document-endnote-type:numeric; document-endnote-place-enddoc:1; document-endnote-initial:1; lang:ru-RU; document-endnote-restart-section:0; document-footnote-restart-page:0; document-footnote-type:numeric; document-footnote-initial:1; document-endnote-place-endsection:0">
+<!-- ======================================================================== -->
+<!-- This file is an AbiWord document.                                        -->
+<!-- AbiWord is a free, Open Source word processor.                           -->
+<!-- More information about AbiWord is available at http://www.abisource.com/ -->
+<!-- You should not edit this file by hand.                                   -->
+<!-- ======================================================================== -->
+
+<metadata>
+<m key="dc.format">application/x-abiword</m>
+<m key="abiword.generator">AbiWord</m>
+</metadata>
+<history version="15" edit-time="7306" last-saved="1344447362" uid="01535eb0-c5c6-11e1-8697-bccc5c1f11bc">
+<version id="3" started="1341399013" uid="5d27b96e-c5c8-11e1-8697-bccc5c1f11bc" auto="0" top-xid="2"/>
+<version id="4" started="1341400500" uid="7e9b0a14-c5c9-11e1-8cd4-fb8f9b676adb" auto="0" top-xid="28"/>
+<version id="7" started="1341400606" uid="09773d36-c5cc-11e1-8260-b0add14bb44a" auto="0" top-xid="33"/>
+<version id="9" started="1341746926" uid="953f8530-c8f1-11e1-9c19-cfd4fe89791d" auto="0" top-xid="97"/>
+<version id="11" started="1341747593" uid="f3746ee0-c8f1-11e1-9897-dec4e2a0fcfc" auto="0" top-xid="125"/>
+<version id="13" started="1341747744" uid="3ca11202-c8f3-11e1-8c9c-ac086a590bcc" auto="0" top-xid="145"/>
+<version id="14" started="1344447159" uid="0d5b8f0a-e17f-11e1-8ef0-9a04c5689cbd" auto="0" top-xid="166"/>
+<version id="15" started="1344447362" uid="85f4dc50-e17f-11e1-8e24-c03712aae808" auto="0" top-xid="167"/>
+</history>
+<styles>
+<s type="P" name="Normal" followedby="Current Settings" props="font-family:Times New Roman; margin-top:0pt; font-variant:normal; margin-left:0pt; widows:2; font-style:normal; text-indent:0in; text-position:normal; line-height:1.0; margin-bottom:0pt; bgcolor:transparent; margin-right:0pt; font-size:12pt; color:000000; text-decoration:none; font-weight:normal; text-align:left; font-stretch:normal"/>
+<s type="P" name="Heading 1" basedon="Normal" followedby="Normal" props="font-size:17pt; margin-top:22pt; font-weight:bold; margin-bottom:3pt; font-family:Arial; keep-with-next:1"/>
+<s type="P" name="Heading 2" basedon="Normal" followedby="Normal" props="font-size:14pt; margin-top:22pt; font-weight:bold; margin-bottom:3pt; font-family:Arial; keep-with-next:1"/>
+<s type="P" name="Heading 3" basedon="Normal" followedby="Normal" props="font-size:12pt; margin-top:22pt; font-weight:bold; margin-bottom:3pt; font-family:Arial; keep-with-next:1"/>
+<s type="C" name="Footnote Reference" basedon="None" followedby="Current Settings" props="text-position:superscript; font-size:10pt"/>
+<s type="C" name="Footnote Text" basedon="Normal" followedby="Current Settings" props="text-position:normal; font-size:10pt"/>
+<s type="C" name="Reference" props="font-size:10pt"/>
+</styles>
+<pagesize pagetype="A4" orientation="portrait" width="210.000000" height="297.000000" units="mm" page-scale="1.000000"/>
+<section xid="1" props="page-margin-footer:0.5000in; page-margin-header:0.5000in; page-margin-right:1.0000in; page-margin-left:1.0000in; page-margin-top:1.0000in; page-margin-bottom:1.0000in">
+<p style="Normal" xid="2" props="text-align:center">Быстрое включение в разработку<c></c></p>
+<p style="Normal" xid="3" props="text-align:center">AX Library<c></c></p>
+<p style="Heading 1" xid="4">Модули<c></c></p>
+<p style="Normal" xid="5">Библиотека делится на несколько модулей. Как правило модули связанны между собой, но не обязательно использовать все.<c></c></p>
+<p style="Heading 2" xid="6">base<c></c></p>
+<p style="Normal" xid="7">Основной модуль, необходимый для корректного функционирования всей библиотеки. Включает в себя перечисление типов, необходимых и часто используемых функций и макросов. Систему ошибок, отлова утечек памяти и другие подобные механизмы.<c></c></p>
+<p style="Heading 3" xid="35">Типы</p>
+<p style="Normal" xid="8">Идея, ради которой он существует - создание безопасных простейших типов, аналогов существующим, но исключающих ошибки переполнения, приведения и подобные.<c></c></p>
+<p style="Normal" xid="10">Как известно, безопасность системы характиризуется самым уязвимым участком <c></c><field footnote-id="0" type="footnote_ref" style="Footnote Reference" xid="14"></field><foot footnote-id="0" xid="11">
+<p footnote-id="0" style="Footnote Text" xid="12" props="font-style:italic"><c props="list-tag:0"></c><field footnote-id="0" type="footnote_anchor" style="Footnote Text" xid="15" props="text-position:superscript"></field><c props="list-tag:0"> </c><c props="list-tag:0; font-style:normal">Совершенный код, Стив Макконнел 2005</c></p>
+</foot>, поэтому одна из прадигм библиотеки - обязательное использование предоставленных типов(кроме случаев работы с «сырыми» данными или где гарантируется константность значения).</p>
+<p style="Normal" xid="17" props="text-align:left; dom-dir:ltr; font-style:italic"><c props="font-weight:normal; font-style:normal">Для целочисленных переменных существует модификатор</c><c props="font-weight:normal; font-style:normal"></c> <c props="font-style:italic">safe_constructor</c><c props="font-style:normal">, задача которого обезопасить работу с существующим типом. Для удобства разработки, в поставке уже обьявленны следующие типы</c><field footnote-id="1" type="footnote_ref" style="Footnote Reference" xid="21" props="font-style:normal"></field><foot footnote-id="1" xid="18">
+<p footnote-id="1" style="Footnote Text" xid="19"><c props="list-tag:1"></c><field footnote-id="1" type="footnote_anchor" style="Footnote Text" xid="22" props="text-position:superscript"></field><c props="list-tag:1">  </c><c props="list-tag:1; font-weight:normal">types.h</c></p>
+</foot><c props="font-style:normal">: 1, 2, 3, 4 байтовые беззнаковые и 4, 8 байтовые знаковые. Имена выбранны согласно нотации о машинном слове</c><field footnote-id="2" type="footnote_ref" style="Footnote Reference" xid="32" props="font-style:normal"></field><foot footnote-id="2" xid="29">
+<p footnote-id="2" style="Footnote Text" xid="30" props="font-style:italic"><c props="list-tag:0"></c><field footnote-id="2" type="footnote_anchor" style="Footnote Text" xid="33" props="text-position:superscript"></field><c props="list-tag:0"> </c>http://en.wikipedia.org/wiki/Word_(computer_architecture)</p>
+</foot><c props="font-style:normal">, с добавлением нового типа </c><c props="font-style:italic">bword</c><c props="font-style:normal">(от big word) - 8 байт.</c></p>
+<p style="Heading 3" xid="37" props="dom-dir:ltr">Исключения<c></c></p>
+<p style="Normal" xid="38" props="dom-dir:ltr">Исключительные ситуации - мощный механизм существования приложения. К счастью(или сожалению), библиотека не поощряет использование исключений в Java стиле. Это значит, что исключение является исключением, а не повседневным поведением программы. Оно происходит лишь в случае ошибки программиста, либо в случае невозможности продолжения работы. В любом случае, исключения подразумеваются как уведомительные, неустраняемые флаги.<c></c></p>
+<p style="Normal" xid="39" props="dom-dir:ltr">Выброс исключения в редком случае подразумевает его обработку, как правило это код ошибки и место где оно произошло.<c></c></p>
+<p style="Normal" xid="40" props="dom-dir:ltr">В поставке предлагается следующие типы неустранимых исключений: assert, exception, todo, dead_space. Последний настоятельно рекомендуется использовать в тех участках, исполнение которых не ожидается.</p>
+<p style="Normal" xid="84" props="dom-dir:ltr"><c></c></p>
+<p style="Normal" xid="85" props="dom-dir:ltr"><c></c></p>
+<p style="Normal" xid="86" props="dom-dir:ltr"><c></c></p>
+<p style="Normal" xid="87" props="dom-dir:ltr"><c></c></p>
+<p style="Normal" xid="88" props="dom-dir:ltr"><c></c></p>
+<p style="Normal" xid="89" props="dom-dir:ltr"><c></c></p>
+<p style="Normal" xid="90" props="dom-dir:ltr"><c></c></p>
+<p style="Normal" xid="91" props="dom-dir:ltr"><c></c></p>
+<p style="Normal" xid="41" props="dom-dir:ltr">Пример:</p>
+<table xid="69">
+<cell xid="70" props="bot-attach:1; left-attach:0; right-attach:1; top-attach:0">
+<p style="Normal" xid="71">switch (key)</p>
+<p style="Normal" xid="74">{</p>
+<p style="Normal" xid="76">case KEY_A:</p>
+<p style="Normal" xid="77">  // Код для первого случая</p>
+<p style="Normal" xid="78">  break;</p>
+<p style="Normal" xid="79">case KEY_B:</p>
+<p style="Normal" xid="165">  // Код для второго случая</p>
+<p style="Normal" xid="80">  break;</p>
+<p style="Normal" xid="81">default:</p>
+<p style="Normal" xid="164">   // Участок кода, куда мы не ожидали что программа зайдет.</p>
+<p style="Normal" xid="82">  dead_space();</p>
+<p style="Normal" xid="75">}</p>
+</cell>
+</table>
+<p style="Normal" xid="68" props="dom-dir:ltr"><c></c></p>
+<p style="Heading 3" xid="97" props="dom-dir:ltr"><c></c>Утечки памяти</p>
+<p style="Normal" xid="93" props="text-align:left; dom-dir:ltr">Для борьбы с утечками памяти при старте любого приложения (в режиме AX::DEBUG) включается подсистема слежения(на базе CRT<field footnote-id="4" type="footnote_ref" style="Footnote Reference" xid="110"></field><foot footnote-id="4" xid="107">
+<p footnote-id="4" style="Footnote Text" xid="108"><c props="list-tag:0"></c><field footnote-id="4" type="footnote_anchor" style="Footnote Text" xid="111" props="text-position:superscript"></field><c props="list-tag:0"> </c>http://msdn.microsoft.com/en-us/library/zh712wwf</p>
+</foot>). После завершения работы приложения в консоль отладки выводится информация о потерянной памяти, участок памяти, и порядковый номер. Для того что бы установить место утечки, следует перезапустить проект, добавив в самом начале <c props="font-family:Times New Roman; font-size:10pt; lang:-none-; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none">BREAK_ON_MEMORY_LEAK(x)</c></p>
+<p style="Normal" xid="99" props="dom-dir:ltr"><c props="font-family:Times New Roman; font-size:10pt; lang:-none-; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none">Для более комфортной работы рекомендуется использовать NEW вместо new.</c><c props="font-family:Times New Roman; font-size:10pt; lang:-none-; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"></c></p>
+<p style="Normal" xid="100" props="dom-dir:ltr"><c props="font-family:Times New Roman; font-size:10pt; lang:-none-; text-position:normal; font-weight:normal; font-style:normal; text-decoration:none"></c></p>
+<p style="Heading 2" xid="125" props="dom-dir:ltr"><c props="lang:-none-">structs</c><c props="lang:-none-"></c></p>
+<p style="Normal" xid="103" props="dom-dir:ltr"><c props="lang:-none-">Фактически набор обособленных структур.</c><c props="lang:-none-"></c></p>
+<p style="Normal" xid="153" props="dom-dir:ltr"><c props="lang:-none-"></c></p>
+<p style="Heading 2" xid="163" props="dom-dir:ltr"><c props="lang:-none-">streams</c><c props="lang:-none-"></c></p>
+<p style="Normal" xid="155" props="dom-dir:ltr"><c props="lang:-none-">Подсистема передачи данных к месту назначения. Абстрагирует от типов источников данных и приема. Мощный инструмент для комплексной обработки потока информации.</c><c props="lang:-none-"></c></p>
+<p style="Normal" xid="156" props="dom-dir:ltr"><c props="lang:-none-"></c></p>
+<p style="Heading 3" xid="157" props="dom-dir:ltr"><c props="lang:-none-">units</c><c props="lang:-none-"></c></p>
+<p style="Normal" xid="159" props="dom-dir:ltr"><c props="lang:-none-">Набор обьектов релизующих какую-либо самостоятельную логику.</c><c props="lang:-none-"></c></p>
+<p style="Normal" xid="160" props="dom-dir:ltr"><c props="lang:-none-"></c></p>
+<p style="Heading 3" xid="161" props="dom-dir:ltr"><c props="lang:-none-">tl4</c><c props="lang:-none-"></c></p>
+<p style="Normal" xid="162" props="dom-dir:ltr"><c props="lang:-none-">Transcend Library 4 - Библиотека связи с сетью, синхронизации и передачи данных посредством сокетов. Поддерживает шифрование и параллельную передачу. Не накладывает ограничения на используемый протокол, гармонично вписывается в модель OSI, над уровнем приложения. Разрешает передачу обьектов любого размера, с возможностью паузы  и дозагрузки. Приоритеты отправки.</c><c props="lang:-none-"></c></p>
+</section>
+</abiword>
