@@ -13,9 +13,9 @@ namespace
 {
   void Replace( char *&base, unsigned int offset, char *add )
   {
-    dword base_len = StrLen(base);
-    dword add_len = StrLen(add);
-    dword new_len = base_len - offset + add_len;
+    word base_len = StrLen(base);
+    word add_len = StrLen(add);
+    word new_len = base_len - offset + add_len;
     char *ret = NEW char[new_len + 1];
     MemCpy(ret, add, add_len);
     MemCpy(ret + add_len, base + offset, base_len - offset);
@@ -34,7 +34,7 @@ void ax_exception::InitStrings( const int i, const char *const f )
 
 void ax_exception::InitStrings( const char *const str, const char *const f )
 {
-  dword size;
+  word size;
   string = NEW char[size = StrLen(str) + 1];
   MemCpy(string, str, size);
   file = NEW char[size = StrLen(f) + 1];

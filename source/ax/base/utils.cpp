@@ -54,7 +54,7 @@ bool DummyCmp( char a, char b )
 
 sst ax::StrMasqEq( const char *str, const char *mask )
 {
-  dword len = 0;
+  word len = 0;
   while (*mask && *str && DummyCmp(*str++, *mask++))
     ++len;
   if (*mask == 0)

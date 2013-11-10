@@ -438,12 +438,12 @@ namespace ax
       /***
        * Other functions
        ***/
-      dword GetSize( void ) const
+      word GetSize( void ) const
       {
         return data_base.size();
       }
 
-      dword GetIdByPos( dword pos ) const
+      word GetIdByPos( word pos ) const
       {
         throw_assert(pos >= 0);
         throw_assert(pos < data_base.size());
@@ -453,7 +453,7 @@ namespace ax
       ~local_db( void )
       {
         CheckDB();
-        dword size = GetSize();
+        word size = GetSize();
 
         while (size > 0)
         {

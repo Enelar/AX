@@ -48,17 +48,17 @@ thread_controller *thread::Start()
   dead_space();
 }
 
-void ax::threads::Sleep( udw ms )
+void ax::threads::Sleep( uw ms )
 {
   ::Sleep(ms);
 }
 
-void thread::Sleep( udw ms )
+void thread::Sleep( uw ms )
 {
   ax::threads::Sleep(ms);
 }
 
-void thread::WaitForWord( udw count, udw recheck_ms )
+void thread::WaitForWord( uw count, uw recheck_ms )
 {
   while (from_owner.Count() < count)
   {

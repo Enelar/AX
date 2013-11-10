@@ -26,7 +26,7 @@ namespace ax
     class income_translator;
     struct system_connection : protected shared_self_controlled
     {
-      unsafe_dword socket;
+      unsafe_word socket;
       STAT_CON status;
 
       ax::units::timestamp t_open, t_la;
@@ -44,8 +44,8 @@ namespace ax
       income_translator *in_translator;
 
       char *host;
-      unsafe_dword ip;
-      unsafe_word port;
+      unsafe_word ip;
+      unsafe_hword port;
 
       system_connection( crypt *en, crypt *de, outcome_translator *ot, income_translator *it,
          tl4_listener_disc on_disc, tl4_listener_inc_mes on_mes );

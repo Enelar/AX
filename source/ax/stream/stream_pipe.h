@@ -17,17 +17,17 @@ namespace ax
     class pipe : public stream
     {
     protected:
-      dword size, pos, buffered, pass;
+      word size, pos, buffered, pass;
       std::list<default_buffer> buffer;
     public:
-      virtual dword Avaible( void ) const;
-      virtual dword Pos( void ) const;
-      virtual dword Size( void ) const;
+      virtual word Avaible( void ) const;
+      virtual word Pos( void ) const;
+      virtual word Size( void ) const;
 
-      virtual default_buffer Read( dword &readed, const dword count = 0);
-      virtual void SlowRead( ub *const &buffer, dword &readed, const dword count );
-      virtual void Add( ub *&buf, const dword size );
-      virtual void Fill( const ub *const ub, const dword size );
+      virtual default_buffer Read( word &readed, const word count = 0);
+      virtual void SlowRead( ub *const &buffer, word &readed, const word count );
+      virtual void Add( ub *&buf, const word size );
+      virtual void Fill( const ub *const ub, const word size );
       virtual void End( );
     };
   };

@@ -8,33 +8,35 @@
 using namespace ax;
 using namespace ax::streams;
 
-dword pipe::Avaible( void ) const
+word pipe::Avaible( void ) const
 {
   return buffered + (in ? in->Avaible() : 0);
 }
-dword pipe::Pos( void ) const
+
+word pipe::Pos( void ) const
 {
   return pos + (in ? in->Pos() : 0);
 }
-dword pipe::Size( void ) const
+
+word pipe::Size( void ) const
 {
   return size + (in ? in->Size() : 0);
 }
 
-stream::default_buffer pipe::Read( dword &readed, const dword count )
+stream::default_buffer pipe::Read( word &readed, const word count )
 {
-  dword size = Min(count, Avaible()), completed = 0;
+  word size = Min(count, Avaible()), completed = 0;
   ub *to_export = NEW ub[size];
   SlowRead(to_export, readed, size);
   throw_assert(readed == size);
   return default_buffer(to_export, size, 0);
 }
 
-void pipe::SlowRead( ub *const &buf, dword &readed, const dword count )
+void pipe::SlowRead( ub *const &buf, word &readed, const word count )
 {
   throw_assert(can_read);
   throw_assert(count <= Avaible());
-  dword completed = 0, size = buffer.size();
+  word completed = 0, size = buffer.size();
   while (completed < count && size)
   {
     default_buffer &t = buffer.front();
@@ -54,13 +56,13 @@ void pipe::SlowRead( ub *const &buf, dword &readed, const dword count )
   readed += size;
 }
 
-void pipe::Add( ub *&buf, const dword size )
+void pipe::Add( ub *&buf, const word size )
 {
   throw_assert(can_write);
   default_buffer b(buf, size, 0);
   buffer.push_back(b);
 }
-void pipe::Fill( const ub *const b, const dword size )
+void pipe::Fill( const ub *const b, const word size )
 {
   ub *to_insert = NEW ub[size];
   MemCpy(to_insert, b, size);

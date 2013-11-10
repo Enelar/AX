@@ -15,13 +15,13 @@ namespace ax
     class crypt : public ax::streams::pipe
     {
     public:
-      default_buffer Read( dword &readed, const dword count = 0);
+      default_buffer Read( word &readed, const word count = 0);
       virtual default_buffer BeforeReturn( default_buffer &inc )
       {
         return inc;
       }
     protected:
-      void SlowRead( ub *const &buffer, dword &readed, const dword count );
+      void SlowRead( ub *const &buffer, word &readed, const word count );
     };
   };
 };

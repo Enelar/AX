@@ -26,9 +26,9 @@ namespace ax
       stream( void );
       stream( stream *const source );
       virtual ~stream( void );
-      virtual dword Avaible( void ) const;
-      virtual dword Pos( void ) const;
-      virtual dword Size( void ) const;
+      virtual word Avaible( void ) const;
+      virtual word Pos( void ) const;
+      virtual word Size( void ) const;
 
       virtual bool CanWrite( void ) const;
       virtual bool CanRead( void ) const;
@@ -39,10 +39,10 @@ namespace ax
       virtual bool IsEnd( void ) const;
       virtual bool Finished( void ) const;
 
-      virtual default_buffer Read( dword &readed, const dword count = 0) = 0;
-      virtual void SlowRead( ub *const &buffer, dword &readed, const dword count ) = 0;
-      virtual void Add( ub *&buf, const dword size );
-      virtual void Fill( const ub *const ub, const dword size );
+      virtual default_buffer Read( word &readed, const word count = 0) = 0;
+      virtual void SlowRead( ub *const &buffer, word &readed, const word count ) = 0;
+      virtual void Add( ub *&buf, const word size );
+      virtual void Fill( const ub *const ub, const word size );
       virtual void End( );
 
       virtual stream *const Attach( stream *const source,
@@ -50,7 +50,7 @@ namespace ax
         bool destroy_when_source_ends = false);
       virtual void DeAttach( stream *const connect );
 
-      virtual default_buffer Steal( dword &stealed, dword how_much );
+      virtual default_buffer Steal( word &stealed, word how_much );
 
       virtual void SetDestroyByIn( bool cond );
       virtual void SetDestroyByOut( bool cond );

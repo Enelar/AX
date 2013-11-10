@@ -12,7 +12,7 @@ namespace ax
 {
   namespace structs
   {
-    template<class Tkey = dword, class Tvalue = dword>
+    template<class Tkey = word, class Tvalue = word>
     class hash
     {
     protected:

@@ -18,8 +18,8 @@ namespace ax
       bool in_other_thread;
     protected:
       talk from_owner, to_owner;
-      void Sleep( udw ms );
-      void WaitForWord( udw count = 1, udw recheck_ms = 1 );
+      void Sleep( uw ms );
+      void WaitForWord( uw count = 1, uw recheck_ms = 1 );
     public:
       virtual ui function() = 0;
       void SetDone()
@@ -36,7 +36,7 @@ namespace ax
       }
       thread_controller *Start();
     };
-    void Sleep( udw ms );
+    void Sleep( uw ms );
   }
 }
 
