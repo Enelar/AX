@@ -5,7 +5,7 @@
 
 #include "../def.h"
 #include "utils.h"
-#pragma warning(disable: 4985)
+
 #include "memcpy.h"
 
 //#define _CRT_MEMORY_DEFINED

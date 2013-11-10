@@ -58,7 +58,7 @@ extern "C" {
 #endif
 */
 
-void *ax_memcpy(void *dest, const void *src, size_t count);
+void *__fastcall ax_memcpy(void *dest, const void *src, size_t count);
 
 /*
 #ifdef __cplusplus

@@ -85,9 +85,6 @@
     <Filter Include="def\threads\src">
       <UniqueIdentifier>{8a5a9c9d-ac31-431e-87d7-59b13e074a9e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="outsource">
-      <UniqueIdentifier>{ab08fe42-8243-4b78-acb4-c072a8502cc7}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ax\base\assert.h">
@@ -270,9 +267,6 @@
     <ClInclude Include="ax\threads\talk.h">
       <Filter>def\threads\talk</Filter>
     </ClInclude>
-    <ClInclude Include="ax\outsource\memcpy.h">
-      <Filter>outsource</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ax\base\exceptions.cpp">
@@ -379,9 +373,6 @@
     </ClCompile>
     <ClCompile Include="ax\threads\lock\mutex_fabric.cpp">
       <Filter>def\threads\mutex\src</Filter>
-    </ClCompile>
-    <ClCompile Include="ax\outsource\memcpy.c">
-      <Filter>outsource</Filter>
     </ClCompile>
     <ClCompile Include="ax\base\memcpy.cpp">
       <Filter>def\base\src</Filter>

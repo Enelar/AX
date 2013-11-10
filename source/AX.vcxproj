@@ -147,7 +147,6 @@
     <ClInclude Include="ax\threads\lock\mutex_fabric.h" />
     <ClInclude Include="ax\threads\lock\windows_mutex.h" />
     <ClInclude Include="ax\threads\talk.h" />
-    <ClInclude Include="ax\outsource\memcpy.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ax\base\exceptions.cpp" />
@@ -186,7 +185,6 @@
     <ClCompile Include="ax\stream\applied\pipe_constructor.cpp" />
     <ClCompile Include="ax\threads\thread.cpp" />
     <ClCompile Include="ax\threads\lock\mutex_fabric.cpp" />
-    <ClCompile Include="ax\outsource\memcpy.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

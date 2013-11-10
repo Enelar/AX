@@ -318,7 +318,7 @@ typedef UInt32              UIntN;
  **
  *******************************************************************/
 
-void *ax_memcpy(void *dest, const void *src, size_t count) 
+void *__fastcall ax_memcpy(void *dest, const void *src, size_t count)
 {
     UInt8* dst8 = (UInt8*)dest;
     UInt8* src8 = (UInt8*)src;
