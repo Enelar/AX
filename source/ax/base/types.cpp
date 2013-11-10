@@ -44,7 +44,9 @@ void ax::CheckTypes( void )
 
   unsafe_bigint ubi = ~0; // should test
   bigint bi = ubi;
-  throw_sassert(bi == BIGINT_MAX, "Wrong max bigint value! Unbelievable! Its impossible!")
+  throw_sassert(bi == BIGINT_MAX, "Wrong max bigint value! Unbelievable! Its impossible!");
+
+  throw_sassert(sizeof(unsafe_word) == WORD_SIZE, "Sizeof word pedicted wrong");
 
   checked = 1;
 }

@@ -28,7 +28,13 @@
 #define WORD_SIZE 4
 #endif
 
-#define SLOW  
+#ifndef SLOW
+#define SLOW
+#endif
+
+#ifndef DEPRECATED
+#define DEPRECATED
+#endif
 
 #include <stddef.h>
 #include "base\assert.h"
