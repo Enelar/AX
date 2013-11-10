@@ -42,12 +42,14 @@
     <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(ProjectDir)..\build\$(ProjectName)\$(Configuration)\</OutDir>
-    <IntDir>$(ProjectDir)..\intermediate\$(ProjectName)\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)..\build\$(SolutionName)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)..\intermediate\$(SolutionName)\$(Configuration)\$(ProjectName)\</IntDir>
+    <TargetName>$(SolutionName)_$(Configuration)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(ProjectDir)..\build\$(ProjectName)\$(Configuration)\</OutDir>
-    <IntDir>$(ProjectDir)..\intermediate\$(ProjectName)\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)..\build\$(SolutionName)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)..\intermediate\$(SolutionName)\$(Configuration)\$(ProjectName)\</IntDir>
+    <TargetName>$(SolutionName)_$(Configuration)</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -63,7 +65,7 @@
       <ShowIncludes>false</ShowIncludes>
     </ClCompile>
     <Lib>
-      <OutputFile>$(OutDir)$(ProjectName)_$(Configuration).lib</OutputFile>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
     </Lib>
   </ItemDefinitionGroup>
@@ -82,7 +84,7 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
     <Lib>
-      <OutputFile>$(OutDir)$(ProjectName)_$(Configuration).lib</OutputFile>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
     </Lib>
   </ItemDefinitionGroup>
