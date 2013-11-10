@@ -90,6 +90,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="ax\base\assert.h" />
+    <ClInclude Include="ax\base\convert.h" />
     <ClInclude Include="ax\def.h" />
     <ClInclude Include="ax\base\exceptions.h" />
     <ClInclude Include="ax\base\memcpy.h" />

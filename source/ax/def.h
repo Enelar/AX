@@ -41,5 +41,6 @@
 #include "base\exceptions.h"
 #include "base\types.h"
 #include "base\utils.h"
+#include "base\convert.h"
 
 #endif

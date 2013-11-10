@@ -267,6 +267,9 @@
     <ClInclude Include="ax\threads\talk.h">
       <Filter>def\threads\talk</Filter>
     </ClInclude>
+    <ClInclude Include="ax\base\convert.h">
+      <Filter>def\base</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ax\base\exceptions.cpp">
