@@ -18,11 +18,32 @@ namespace ax
 
 #define OUT
 
+DEPRECATED
 #define KIBI GETMAXCOUNT(10)
 #define MIBI GETMAXCOUNT(20)
 #define GIBI GETMAXCOUNT(30)
 #define TIBI GETMAXCOUNT(40)
 #define PIBI GETMAXCOUNT(50)
+
+//*/ Wait for user-literal C++11 support
+#define KB REQUIRE_CPP11 *KIBI
+#define MB REQUIRE_CPP11 *MIBI
+#define GB REQUIRE_CPP11 *GIBI
+#define TB REQUIRE_CPP11 *TIBI
+#define PB REQUIRE_CPP11 *PIBI
+
+/*/ Wait for http://msdn.microsoft.com/en-us/library/hh567368
+template<int amount, typename ret_type = word>
+ret_type Multiplier(word number)
+{
+  return number << amount;
+}
+
+constexpr word operator"" GB(word a)
+{
+  return Multiplier<20>(a);
+}
+//*/
 
 #define Min3(a, b, c) Min(Min(a, b), c)
 #define Max3(a, b, c) Max(Max(a, b), c)

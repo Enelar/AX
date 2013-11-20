@@ -36,6 +36,9 @@
 #define DEPRECATED
 #endif
 
+#define REQUIRE_CPP11
+#define REQUIRE_CPP14
+
 #include <stddef.h>
 #include "base\assert.h"
 #include "base\exceptions.h"
