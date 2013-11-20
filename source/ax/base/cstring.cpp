@@ -1,4 +1,6 @@
-#ifdef _AX_UTILS_H_
+#ifndef _AX_UTILS_H_
+#include "../def.h"
+#else
 
 template<typename char_t>
 sst ax::StrLen( const char_t *const str )
