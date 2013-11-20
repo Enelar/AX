@@ -152,6 +152,7 @@
     <ClInclude Include="ax\threads\talk.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ax\base\cstring.cpp" />
     <ClCompile Include="ax\base\exceptions.cpp" />
     <ClCompile Include="ax\base\memcpy.cpp" />
     <ClCompile Include="ax\base\memmove.cpp" />
