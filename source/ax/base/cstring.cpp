@@ -56,7 +56,7 @@ sst ax::StrFastCopy(char_t *&dest, const char_t * const source)
   try
   {
     dest = NEW char_t[len];
-    MemCpy(dest, source, len);
+    MemCpy(dest, source, len * sizeof(char_t));
     return len - 1;
   } catch (...)
   {
