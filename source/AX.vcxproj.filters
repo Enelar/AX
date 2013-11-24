@@ -380,6 +380,9 @@
     <ClCompile Include="ax\base\memcpy.cpp">
       <Filter>def\base\src</Filter>
     </ClCompile>
+    <ClCompile Include="ax\base\cstring.cpp">
+      <Filter>def\base\src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="ax\ax" />
