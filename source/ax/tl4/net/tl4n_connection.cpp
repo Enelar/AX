@@ -29,7 +29,7 @@ connection network::OpenConnection( const char *const addr, const word port,
   dhash h = store->con.ImportData(NEW system_connection(en, de, ot, it, on_disc, on_mes));
   system_connection *c = store->con[h];
 
-  StrFastCopy(c->host, addr);
+  StrClone(c->host, addr);
   c->port = port;
   c->status = TL4_CON_PRE_IP_RESOLV;
 

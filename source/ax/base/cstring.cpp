@@ -28,9 +28,9 @@ sst ax::StrLenSafeFast(char_t *const str, const sst buf_size)
 template<typename char_t>
 sst ax::StrMasqEq(const char_t *str, const char_t *mask)
 {
-  auto DummyCmp = []( char_t a, char_t b )
+  inline auto DummyCmp = []( char_t a, char_t b )
   {
-    auto ToBig = []( char_t a )
+    inline auto ToBig = []( char_t a )
     {
       if (a > 'Z')
         return a - ('a' - 'A');
@@ -48,9 +48,9 @@ sst ax::StrMasqEq(const char_t *str, const char_t *mask)
 }
 
 template<typename char_t>
-sst ax::StrFastCopy(char_t *&dest, const char_t * const source)
+sst ax::StrClone(char_t *&dest, const char_t * const source)
 {
-  throw_sassert(dest == nullptr, "Destination of StrFastCopy not empty");
+  throw_sassert(dest == nullptr, "Destination of StrClone not empty");
   sst len = StrLen(source) + 1;
 
   try
@@ -64,5 +64,23 @@ sst ax::StrFastCopy(char_t *&dest, const char_t * const source)
     throw;
   }
 }
+
+template<typename char_t>
+char_t *ax::StrClone(const char_t * const source)
+{
+  char_t *ret = nullptr;
+  StrClone(ret, source);
+  return ret;
+}
+
+template<typename char_t>
+sst StrCopy(char_t *dest, const char_t *const source, const sst max_allowed_length)
+{
+  sst len = StrLen(source);
+  throw_assert(len <= max_allowed_length);
+  MemCpy(dest, source, (len + 1) * sizeof(char_t));
+  return len;
+}
+
 
 #endif
