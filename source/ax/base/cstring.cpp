@@ -8,7 +8,7 @@ sst ax::StrLen( const char_t *const str )
   sst i = -1;
   while (str[++i] != 0)
     ;
-  return i - 1;
+  return i;
 }
 
 template<typename char_t>
