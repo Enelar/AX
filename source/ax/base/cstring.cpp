@@ -74,7 +74,7 @@ char_t *ax::StrClone(const char_t * const source)
 }
 
 template<typename char_t>
-sst StrCopy(char_t *dest, const char_t *const source, const sst max_allowed_length)
+sst ax::StrCopy(char_t *dest, const char_t *const source, const sst max_allowed_length)
 {
   sst len = StrLen(source);
   throw_assert(len <= max_allowed_length);
