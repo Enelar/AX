@@ -39,6 +39,9 @@
 #define REQUIRE_CPP11
 #define REQUIRE_CPP14
 
+#define implementation_required(message) static_assert(false, "Implementation required: " message)
+#define IMPLEMENTATION_REQUIRED /*implementation_required("")*/ static_assert(false, "Implementation required");
+
 #include <stddef.h>
 #include "base\assert.h"
 #include "base\exceptions.h"
