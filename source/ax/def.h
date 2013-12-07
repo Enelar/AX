@@ -39,6 +39,28 @@
 #define REQUIRE_CPP11
 #define REQUIRE_CPP14
 
+#ifndef CPP11_SUPPORTED
+#define CPP11_SUPPORTED (_MSC_VER >= 1800) /* VS2013 minimal */
+#endif
+
+#ifndef CPP14_SUPPORTED
+#define CPP14_SUPPORTED 0
+#endif
+
+#if CPP11_SUPPORTED
+#define CPP11_ONLY(code) code
+#else
+#define CPP11_ONLY(code)
+#endif
+
+#if CPP14_SUPPORTED
+#define CPP14_ONLY(code) code
+#else
+#define CPP14_ONLY(code)
+#endif
+
+
+
 #define implementation_required(message) static_assert(false, "Implementation required: " message)
 #define IMPLEMENTATION_REQUIRED /*implementation_required("")*/ static_assert(false, "Implementation required");
 

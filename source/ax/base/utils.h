@@ -172,22 +172,22 @@ constexpr word operator"" GB(word a)
   }
 
 
-  template<typename char_t = char>
+  template<typename char_t CPP11_ONLY(= char)>
   sst StrLen(const char_t *const str);
 
-  template<typename char_t = char>
+  template<typename char_t CPP11_ONLY(= char)>
   sst StrLenSafeFast(char_t *const str, const sst buf_size);
 
-  template<typename char_t = char>
+  template<typename char_t CPP11_ONLY(= char)>
   sst StrMasqEq(const char_t *str, const char_t *mask);
 
-  template<typename char_t = char>
+  template<typename char_t CPP11_ONLY(= char)>
   sst StrClone(char_t *&dest, const char_t *const source);
 
-  template<typename char_t = char>
+  template<typename char_t CPP11_ONLY(= char)>
   char_t *StrClone(const char_t *const source);
 
-  template<typename char_t = char>
+  template<typename char_t CPP11_ONLY(= char)>
   sst StrCopy(char_t *dest, const char_t *const source, const sst max_allowed_length );
 
   void MemCpy( void *const destination, const void *const source, const sst length );
