@@ -59,7 +59,7 @@
 #define CPP14_ONLY(code)
 #endif
 
-#define compile_error(message) static_assert(false, (message))
+#define compile_error(message) static_assert(false, message)
 
 #define implementation_required(message) compile_error("Implementation required: " message)
 #define IMPLEMENTATION_REQUIRED /*implementation_required("")*/ compile_error("Implementation required");
