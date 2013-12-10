@@ -59,10 +59,11 @@
 #define CPP14_ONLY(code)
 #endif
 
+#define compile_error(message) static_assert(false, (message))
 
+#define implementation_required(message) compile_error("Implementation required: " message)
+#define IMPLEMENTATION_REQUIRED /*implementation_required("")*/ compile_error("Implementation required");
 
-#define implementation_required(message) static_assert(false, "Implementation required: " message)
-#define IMPLEMENTATION_REQUIRED /*implementation_required("")*/ static_assert(false, "Implementation required");
 
 #include <stddef.h>
 #include "base\assert.h"
