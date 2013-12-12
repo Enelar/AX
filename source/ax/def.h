@@ -28,13 +28,12 @@
 #define WORD_SIZE 4
 #endif
 
-#ifndef SLOW
 #define SLOW
-#endif
-
-#ifndef DEPRECATED
 #define DEPRECATED
-#endif
+#define MEMLEAK
+#define REFACTOR
+#define MAYBEWRONG
+#define BEW MAYBEWRONG
 
 #define REQUIRE_CPP11
 #define REQUIRE_CPP14
@@ -63,7 +62,6 @@
 
 #define implementation_required(message) compile_error("Implementation required: " message)
 #define IMPLEMENTATION_REQUIRED /*implementation_required("")*/ compile_error("Implementation required");
-
 
 #include <stddef.h>
 #include "base\assert.h"
