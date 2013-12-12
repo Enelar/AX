@@ -63,6 +63,12 @@
 #define implementation_required(message) compile_error("Implementation required: " message)
 #define IMPLEMENTATION_REQUIRED /*implementation_required("")*/ compile_error("Implementation required");
 
+#ifndef DEPRECATED_ERRORS_IGNORE
+#define DEPRECATED_ERRORS_IGNORE 0
+#endif
+
+#define DEPRECATED_FORCE static_assert(DEPRECATED_ERRORS_IGNORE, "This code is deprecated. It will removed in futute. Use DEPRECATED_ERRORS_IGNORE to workaround");
+
 #include <stddef.h>
 #include "base\assert.h"
 #include "base\exceptions.h"

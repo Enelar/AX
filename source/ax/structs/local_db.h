@@ -16,6 +16,7 @@ namespace ax
 {
   namespace structs
   {
+    REFACTOR DEPRECATED_FORCE // Mostly copying std::map
     template <typename db_data, class db_hash = dhash >
     class local_db : object
     {

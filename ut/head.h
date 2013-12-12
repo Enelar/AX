@@ -1,6 +1,7 @@
 #ifndef _HEAD_H_
 #define _HEAD_H_
 
+#define DEPRECATED_ERRORS_IGNORE 1
 #include "../source/ax/def.h"
 #include <list>
 

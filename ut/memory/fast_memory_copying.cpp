@@ -1,5 +1,5 @@
-#include "../../source/ax/memory/mem.h"
 #include "mem_tests.h"
+#include "../../source/ax/memory/mem.h"
 
 using namespace ut;
 

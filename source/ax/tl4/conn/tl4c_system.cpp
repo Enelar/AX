@@ -3,6 +3,7 @@
  * No part of this file could be used or viewed without Develop Project agreement
  */
 
+#include "../sys/tl4_def.h"
 #include "../tl4.h"
 #include "tl4c_system.h"
 

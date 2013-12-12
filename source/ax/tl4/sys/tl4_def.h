@@ -6,8 +6,14 @@
 #ifndef _TL4_DEF_H_
 #define _TL4_DEF_H_
 
+#ifdef DEPRECATED_ERRORS_IGNORE
+#undef DEPRECATED_ERRORS_IGNORE
+#endif
+#define DEPRECATED_ERRORS_IGNORE 1
+
 #ifndef _IAM_UNDER_BILL_GATES
 #include "../tl4.h"
+
 #include "../../structs/local_db.h"
 
 #ifndef _TL4_DEBUG
