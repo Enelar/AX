@@ -155,24 +155,6 @@
     <ProjectReference Include="base.vcxproj">
       <Project>{bf6983ff-cbc7-43d6-9579-0d0ed8f61b35}</Project>
     </ProjectReference>
-    <ProjectReference Include="memory.vcxproj">
-      <Project>{9c7896f8-5bc2-4e8b-870d-22af924122a2}</Project>
-    </ProjectReference>
-    <ProjectReference Include="stream.vcxproj">
-      <Project>{34248289-580c-46db-99e8-00572c7e8329}</Project>
-    </ProjectReference>
-    <ProjectReference Include="structs.vcxproj">
-      <Project>{fe587ed3-8d0d-4ff8-81b9-7ae8a293e293}</Project>
-    </ProjectReference>
-    <ProjectReference Include="threads.vcxproj">
-      <Project>{bb957477-bbb8-4d26-a168-6664f4d63e07}</Project>
-    </ProjectReference>
-    <ProjectReference Include="tl4.vcxproj">
-      <Project>{4a58ff43-dd1c-4b11-a3f9-46892dbe93c9}</Project>
-    </ProjectReference>
-    <ProjectReference Include="units.vcxproj">
-      <Project>{ea5df217-0ca2-452a-be7b-2a851aeb339b}</Project>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
