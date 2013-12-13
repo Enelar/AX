@@ -13,12 +13,8 @@
 #define _DEBUG_ 0
 #endif
 
-#ifndef NULL
-#ifdef __cplusplus
-#define NULL    nullptr
-#else
-#define NULL    ((void *)0)
-#endif
+#ifndef __cplusplus
+#error C++03 is required to build this library
 #endif
 
 #define QUOTEME(x) #x
@@ -39,11 +35,11 @@
 #define REQUIRE_CPP14
 
 #ifndef CPP11_SUPPORTED
-#define CPP11_SUPPORTED (_MSC_VER >= 1800) /* VS2013 minimal */
+#define CPP11_SUPPORTED (__cplusplus >= 201103L)
 #endif
 
 #ifndef CPP14_SUPPORTED
-#define CPP14_SUPPORTED 0
+#define CPP14_SUPPORTED (__cplusplus >= 201400L)
 #endif
 
 #if CPP11_SUPPORTED
@@ -56,6 +52,14 @@
 #define CPP14_ONLY(code) code
 #else
 #define CPP14_ONLY(code)
+#endif
+
+#ifndef NULL
+  #if CPP11_SUPPORTED
+    #define NULL    nullptr
+  #else
+    #define NULL    ((void *)0)
+  #endif
 #endif
 
 #define compile_error(message) static_assert(false, message)
