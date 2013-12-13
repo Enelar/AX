@@ -87,6 +87,20 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
     </Lib>
+    <PostBuildEvent>
+      <Command>copy "$(TargetPath)" "$(SolutionDir)\dependecies\$(Configuration)\"</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Share result as dependecie</Message>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>rmdir /S /Q "$(SolutionDir)\dependecies\"</Command>
+      <Message>Force clear dependencies before compile</Message>
+    </PreBuildEvent>
+    <PreLinkEvent>
+      <Command>mkdir "$(SolutionDir)\dependecies\$(Configuration)\"</Command>
+      <Message>Create target directory</Message>
+    </PreLinkEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -110,6 +124,22 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
     </Lib>
+    <PostBuildEvent>
+      <Command>copy "$(TargetPath)" "$(SolutionDir)\dependecies\$(Configuration)\"</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Share result as dependecie</Message>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>rmdir /S /Q "$(SolutionDir)\dependecies\"</Command>
+      <Message>Force clear dependencies before compile</Message>
+    </PreBuildEvent>
+    <PreLinkEvent>
+      <Command>mkdir "$(SolutionDir)\dependecies\$(Configuration)\"</Command>
+    </PreLinkEvent>
+    <PreLinkEvent>
+      <Message>Create target directory</Message>
+    </PreLinkEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Production|Win32'">
     <ClCompile>
@@ -138,6 +168,22 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
     </Lib>
+    <PostBuildEvent>
+      <Command>copy "$(TargetPath)" "$(SolutionDir)\dependecies\$(Configuration)\"</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Share result as dependecie</Message>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>rmdir /S /Q "$(SolutionDir)\dependecies\"</Command>
+      <Message>Force clear dependencies before compile</Message>
+    </PreBuildEvent>
+    <PreLinkEvent>
+      <Command>mkdir "$(SolutionDir)\dependecies\$(Configuration)\"</Command>
+    </PreLinkEvent>
+    <PreLinkEvent>
+      <Message>Create target directory</Message>
+    </PreLinkEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="ax\base\assert.h" />

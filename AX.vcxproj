@@ -58,6 +58,9 @@
     <OutDir>$(SolutionDir)..\build\$(SolutionName)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)..\intermediate\$(SolutionName)\$(Configuration)\$(ProjectName)\</IntDir>
     <TargetName>$(ProjectName)_$(Configuration)</TargetName>
+    <CustomBuildBeforeTargets>
+    </CustomBuildBeforeTargets>
+    <CustomBuildAfterTargets>Compile</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(SolutionDir)..\build\$(SolutionName)\$(Configuration)\</OutDir>
@@ -90,6 +93,30 @@
     <ProjectReference>
       <LinkLibraryDependencies>true</LinkLibraryDependencies>
     </ProjectReference>
+    <CustomBuildStep>
+      <Command>
+      </Command>
+      <Message>
+      </Message>
+    </CustomBuildStep>
+    <PreBuildEvent>
+      <Command>"$(DevEnvDir)\WDExpress.exe" /build $(Configuration) "$(ProjectDir)AX_dependencies.sln" </Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>Compile dependencies</Message>
+    </PreBuildEvent>
+    <PreLinkEvent>
+      <Command>copy "$(ProjectDir)\dependecies\$(Configuration)\*" "$(OutDir)" </Command>
+    </PreLinkEvent>
+    <PreLinkEvent>
+      <Message>Build AX library depencies</Message>
+    </PreLinkEvent>
+    <PostBuildEvent>
+      <Command>rmdir /S /Q "$(ProjectDir)\dependecies"</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Remove dependencies</Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -116,6 +143,22 @@
     <ProjectReference>
       <LinkLibraryDependencies>true</LinkLibraryDependencies>
     </ProjectReference>
+    <PostBuildEvent>
+      <Command>rmdir /S /Q "$(ProjectDir)\dependecies"</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Remove dependencies</Message>
+    </PostBuildEvent>
+    <PreLinkEvent>
+      <Command>copy "$(ProjectDir)\dependecies\$(Configuration)\*" "$(OutDir)" </Command>
+      <Message>Build AX library depencies</Message>
+    </PreLinkEvent>
+    <PreBuildEvent>
+      <Command>"$(DevEnvDir)\WDExpress.exe" /build $(Configuration) "$(ProjectDir)AX_dependencies.sln" </Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>Compile dependencies</Message>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Production|Win32'">
     <ClCompile>
@@ -147,13 +190,32 @@
     <ProjectReference>
       <LinkLibraryDependencies>true</LinkLibraryDependencies>
     </ProjectReference>
+    <PreLinkEvent>
+      <Command>copy "$(ProjectDir)\dependecies\$(Configuration)\*" "$(OutDir)" </Command>
+      <Message>Build AX library depencies</Message>
+    </PreLinkEvent>
+    <PreBuildEvent>
+      <Command>"$(DevEnvDir)\WDExpress.exe" /build $(Configuration) "$(ProjectDir)AX_dependencies.sln" </Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>Compile dependencies</Message>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>rmdir /S /Q "$(ProjectDir)\dependecies"</Command>
+      <Message>Remove dependencies</Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <None Include="ax\ax" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="base.vcxproj">
+    <ProjectReference Include="..\fs\AX\source\base.vcxproj">
       <Project>{bf6983ff-cbc7-43d6-9579-0d0ed8f61b35}</Project>
+      <Private>true</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

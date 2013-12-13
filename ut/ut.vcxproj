@@ -106,7 +106,7 @@
     <ClInclude Include="head.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\source\AX.vcxproj">
+    <ProjectReference Include="..\AX.vcxproj">
       <Project>{792c27e3-863b-434c-a47a-f5f0515bfb20}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
