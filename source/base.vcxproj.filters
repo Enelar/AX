@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="base">
+      <UniqueIdentifier>{1c300f7a-63d0-4d30-bf6b-fa8a82c24b33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base\src">
+      <UniqueIdentifier>{5faea305-7bfa-47d7-af98-70fcd110cab0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ax\base\assert.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\def.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\base\exceptions.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\base\memcpy.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\base\types.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\base\utils.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\base\convert.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\base\pragma_once_test.h">
+      <Filter>base</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ax\base\exceptions.cpp">
+      <Filter>base\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\base\memmove.cpp">
+      <Filter>base\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\base\types.cpp">
+      <Filter>base\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\base\utils.cpp">
+      <Filter>base\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\base\memcpy.cpp">
+      <Filter>base\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\base\cstring.cpp">
+      <Filter>base\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
