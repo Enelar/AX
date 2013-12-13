@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="memory">
+      <UniqueIdentifier>{73bd0020-e4ac-4e08-9edd-dd2564fea3fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="memory\src">
+      <UniqueIdentifier>{3c0006eb-8424-4dbf-856c-edad3e92eba3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ax\memory\fast_mem.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\memory\fast_offset_mem.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\memory\mem.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\memory\mem_block.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\memory\mem_sys.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\memory\parent_block.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\memory\slow_mem.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ax\memory\fast_mem.cpp">
+      <Filter>memory\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\memory\fast_offset_mem.cpp">
+      <Filter>memory\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\memory\mem.cpp">
+      <Filter>memory\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\memory\mem_block.cpp">
+      <Filter>memory\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\memory\parent_block.cpp">
+      <Filter>memory\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\memory\slow_mem.cpp">
+      <Filter>memory\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

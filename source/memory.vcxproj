@@ -15,7 +15,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{792C27E3-863B-434C-A47A-F5F0515BFB20}</ProjectGuid>
+    <ProjectGuid>{9C7896F8-5BC2-4E8B-870D-22AF924122A2}</ProjectGuid>
     <RootNamespace>AX</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>
@@ -87,9 +87,6 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
     </Lib>
-    <ProjectReference>
-      <LinkLibraryDependencies>true</LinkLibraryDependencies>
-    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -113,9 +110,6 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
     </Lib>
-    <ProjectReference>
-      <LinkLibraryDependencies>true</LinkLibraryDependencies>
-    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Production|Win32'">
     <ClCompile>
@@ -144,12 +138,23 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
     </Lib>
-    <ProjectReference>
-      <LinkLibraryDependencies>true</LinkLibraryDependencies>
-    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="ax\ax" />
+    <ClInclude Include="ax\memory\fast_mem.h" />
+    <ClInclude Include="ax\memory\fast_offset_mem.h" />
+    <ClInclude Include="ax\memory\mem.h" />
+    <ClInclude Include="ax\memory\mem_block.h" />
+    <ClInclude Include="ax\memory\mem_sys.h" />
+    <ClInclude Include="ax\memory\parent_block.h" />
+    <ClInclude Include="ax\memory\slow_mem.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ax\memory\fast_mem.cpp" />
+    <ClCompile Include="ax\memory\fast_offset_mem.cpp" />
+    <ClCompile Include="ax\memory\mem.cpp" />
+    <ClCompile Include="ax\memory\mem_block.cpp" />
+    <ClCompile Include="ax\memory\parent_block.cpp" />
+    <ClCompile Include="ax\memory\slow_mem.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="base.vcxproj">

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="threads">
+      <UniqueIdentifier>{ec024646-3fd7-43f1-a88b-0ed3d2de7189}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="threads\mutex">
+      <UniqueIdentifier>{dc536fb2-74cb-47d1-a27f-69f3a4c26a3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="threads\mutex\src">
+      <UniqueIdentifier>{b35cb279-1f77-44c6-ad55-c46c976ed093}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="threads\mutex\os">
+      <UniqueIdentifier>{cb688af7-f32f-430b-81d1-896eccd3fc37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="threads\talk">
+      <UniqueIdentifier>{4ac135f1-5468-42aa-b7cb-33f5325fe25c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="threads\src">
+      <UniqueIdentifier>{fd072287-2252-4c04-b25d-b2c541a88a80}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ax\threads\thread.cpp">
+      <Filter>threads</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\threads\lock\mutex_fabric.cpp">
+      <Filter>threads\mutex\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ax\threads\lock.h">
+      <Filter>threads</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\threads\thread.h">
+      <Filter>threads</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\threads\thread_controller.h">
+      <Filter>threads</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\threads\lock\abstract_mutex.h">
+      <Filter>threads\mutex</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\threads\lock\mutex.h">
+      <Filter>threads\mutex</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\threads\lock\mutex_fabric.h">
+      <Filter>threads\mutex</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\threads\lock\windows_mutex.h">
+      <Filter>threads\mutex\os</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\threads\talk.h">
+      <Filter>threads\talk</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

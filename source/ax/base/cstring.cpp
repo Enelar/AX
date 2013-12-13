@@ -5,7 +5,10 @@
 template<typename char_t>
 sst ax::StrLen( const char_t *const str )
 {
-  sst i = -1;
+  sst i = MAXVALUEBYTYPE(sst);
+#if _DEBUG_
+  throw_assert(i + 1 == 0);
+#endif
   while (str[++i] != 0)
     ;
   return i;

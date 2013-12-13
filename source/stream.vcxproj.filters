@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="stream">
+      <UniqueIdentifier>{fe0c214b-910d-4792-a064-8bbc99c6a910}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="stream\abstract">
+      <UniqueIdentifier>{9308fefe-80e4-40d7-a1b0-df0997071e9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="stream\abstract\src">
+      <UniqueIdentifier>{d0801b1f-5e6d-4783-999f-b5021c86c880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="stream\src">
+      <UniqueIdentifier>{e454091d-63c1-474f-b8e3-a277e3d6b311}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="stream\old">
+      <UniqueIdentifier>{e5328ea0-c087-4ca7-a9ad-0e83a9922b6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="stream\simple">
+      <UniqueIdentifier>{9f837778-4a12-4d6e-a15e-e07c4d971eef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="stream\applied">
+      <UniqueIdentifier>{842f27e6-8dd3-4d9d-b53c-b6f3723a89a6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ax\stream\abstract\abstract_duct.h">
+      <Filter>stream\abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\stream\abstract\abstract_pull.h">
+      <Filter>stream\abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\stream\abstract\abstract_push.h">
+      <Filter>stream\abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\stream\abstract\iendpoint.h">
+      <Filter>stream\abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\stream\abstract\oendpoint.h">
+      <Filter>stream\abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\stream\abstract\stream_base.h">
+      <Filter>stream\abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\stream\stream.h">
+      <Filter>stream\old</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\stream\stream_l2n.h">
+      <Filter>stream\old</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\stream\stream_pipe.h">
+      <Filter>stream\old</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\stream\stream_pump.h">
+      <Filter>stream\old</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\stream\duct.h">
+      <Filter>stream\simple</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\stream\pull.h">
+      <Filter>stream\simple</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\stream\push.h">
+      <Filter>stream\simple</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\stream\tube.h">
+      <Filter>stream\simple</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\stream\applied\pipe.h">
+      <Filter>stream\applied</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\stream\applied\pipe_constructor.h">
+      <Filter>stream\applied</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ax\stream\abstract\iendpoint.cpp">
+      <Filter>stream\abstract\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\stream\abstract\oendpoint.cpp">
+      <Filter>stream\abstract\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\stream\duct.cpp">
+      <Filter>stream\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\stream\stream.cpp">
+      <Filter>stream\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\stream\stream_pipe.cpp">
+      <Filter>stream\src</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\stream\applied\pipe_constructor.cpp">
+      <Filter>stream\applied</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

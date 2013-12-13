@@ -14,8 +14,44 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ax\tl4\conn\tl4c_system.cpp" />
+    <ClCompile Include="ax\tl4\conn\tl4_connection.cpp" />
+    <ClCompile Include="ax\tl4\low\_w_tl4_low.cpp" />
+    <ClCompile Include="ax\tl4\mes\tl4_crypt.cpp" />
+    <ClCompile Include="ax\tl4\net\resp_con\tl4nrc_connect.cpp" />
+    <ClCompile Include="ax\tl4\net\resp_con\tl4nrc_resolve.cpp" />
+    <ClCompile Include="ax\tl4\net\resp_con\tl4nr_connection.cpp" />
+    <ClCompile Include="ax\tl4\net\tl4n_connection.cpp" />
+    <ClCompile Include="ax\tl4\net\tl4n_response.cpp" />
+    <ClCompile Include="ax\tl4\net\tl4_network.cpp" />
+    <ClCompile Include="ax\tl4\port\tl4p_system.cpp" />
+    <ClCompile Include="ax\tl4\tl4.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ax\tl4\conn\tl4c_system.h" />
+    <ClInclude Include="ax\tl4\conn\tl4_connection.h" />
+    <ClInclude Include="ax\tl4\low\tl4_low.h" />
+    <ClInclude Include="ax\tl4\mes\tl4_crypt.h" />
+    <ClInclude Include="ax\tl4\mes\tl4_default.h" />
+    <ClInclude Include="ax\tl4\mes\tl4_serial.h" />
+    <ClInclude Include="ax\tl4\mes\tl4_translator.h" />
+    <ClInclude Include="ax\tl4\net\resp_con\tl4nr_connection.h" />
+    <ClInclude Include="ax\tl4\net\tl4_network.h" />
+    <ClInclude Include="ax\tl4\port\tl4p_system.h" />
+    <ClInclude Include="ax\tl4\port\tl4_port.h" />
+    <ClInclude Include="ax\tl4\sys\tl4_def.h" />
+    <ClInclude Include="ax\tl4\sys\tl4_status.h" />
+    <ClInclude Include="ax\tl4\sys\tl4_storage.h" />
+    <ClInclude Include="ax\tl4\tl4.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="base.vcxproj">
+      <Project>{bf6983ff-cbc7-43d6-9579-0d0ed8f61b35}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{792C27E3-863B-434C-A47A-F5F0515BFB20}</ProjectGuid>
+    <ProjectGuid>{4A58FF43-DD1C-4B11-A3F9-46892DBE93C9}</ProjectGuid>
     <RootNamespace>AX</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>
@@ -87,9 +123,6 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
     </Lib>
-    <ProjectReference>
-      <LinkLibraryDependencies>true</LinkLibraryDependencies>
-    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -113,9 +146,6 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
     </Lib>
-    <ProjectReference>
-      <LinkLibraryDependencies>true</LinkLibraryDependencies>
-    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Production|Win32'">
     <ClCompile>
@@ -144,18 +174,7 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
     </Lib>
-    <ProjectReference>
-      <LinkLibraryDependencies>true</LinkLibraryDependencies>
-    </ProjectReference>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <None Include="ax\ax" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="base.vcxproj">
-      <Project>{bf6983ff-cbc7-43d6-9579-0d0ed8f61b35}</Project>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
     <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />

@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="tl4">
+      <UniqueIdentifier>{84b3661c-e6c8-4f0b-9bae-4956ddf55f61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tl4\con">
+      <UniqueIdentifier>{750c7f8e-66f7-4a47-bf58-6992b1a336d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tl4\sys">
+      <UniqueIdentifier>{89f0131c-aaa0-4058-b4d5-f56c04590bec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tl4\mes">
+      <UniqueIdentifier>{ef53b7ba-a7aa-47af-a58a-8fdd124b190f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tl4\port">
+      <UniqueIdentifier>{a6297b91-a060-4bc1-b25b-1b71004a5421}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tl4\net">
+      <UniqueIdentifier>{6cb95c40-9508-4916-a6d9-d54ecfb2a35c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tl4\net\con">
+      <UniqueIdentifier>{c58d653f-9aa9-401f-bbb7-e1f862c30c19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tl4\low">
+      <UniqueIdentifier>{0106963b-cb5d-417e-b304-b205b6ec2c5e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ax\tl4\tl4.cpp">
+      <Filter>tl4</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\tl4\conn\tl4_connection.cpp">
+      <Filter>tl4\con</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\tl4\conn\tl4c_system.cpp">
+      <Filter>tl4\con</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\tl4\mes\tl4_crypt.cpp">
+      <Filter>tl4\mes</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\tl4\port\tl4p_system.cpp">
+      <Filter>tl4\port</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\tl4\net\tl4_network.cpp">
+      <Filter>tl4\net</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\tl4\net\tl4n_connection.cpp">
+      <Filter>tl4\net</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\tl4\net\tl4n_response.cpp">
+      <Filter>tl4\net</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\tl4\net\resp_con\tl4nr_connection.cpp">
+      <Filter>tl4\net\con</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\tl4\net\resp_con\tl4nrc_connect.cpp">
+      <Filter>tl4\net\con</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\tl4\net\resp_con\tl4nrc_resolve.cpp">
+      <Filter>tl4\net\con</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\tl4\low\_w_tl4_low.cpp">
+      <Filter>tl4\low</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ax\tl4\tl4.h">
+      <Filter>tl4</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\tl4\conn\tl4_connection.h">
+      <Filter>tl4\con</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\tl4\conn\tl4c_system.h">
+      <Filter>tl4\con</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\tl4\sys\tl4_def.h">
+      <Filter>tl4\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\tl4\sys\tl4_status.h">
+      <Filter>tl4\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\tl4\sys\tl4_storage.h">
+      <Filter>tl4\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\tl4\mes\tl4_crypt.h">
+      <Filter>tl4\mes</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\tl4\mes\tl4_default.h">
+      <Filter>tl4\mes</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\tl4\mes\tl4_serial.h">
+      <Filter>tl4\mes</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\tl4\mes\tl4_translator.h">
+      <Filter>tl4\mes</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\tl4\port\tl4_port.h">
+      <Filter>tl4\port</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\tl4\port\tl4p_system.h">
+      <Filter>tl4\port</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\tl4\net\tl4_network.h">
+      <Filter>tl4\net</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\tl4\net\resp_con\tl4nr_connection.h">
+      <Filter>tl4\net\con</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\tl4\low\tl4_low.h">
+      <Filter>tl4\low</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

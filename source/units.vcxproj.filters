@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="units">
+      <UniqueIdentifier>{062b7fbc-2104-41ec-aae0-22a18d392e2a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ax\units\timestamp.cpp">
+      <Filter>units</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\units\toggle.cpp">
+      <Filter>units</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ax\units\timestamp.h">
+      <Filter>units</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\units\toggle.h">
+      <Filter>units</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="structs">
+      <UniqueIdentifier>{82d674b2-fef5-4b59-ad1b-d7008e1c80ef}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ax\structs\array.h">
+      <Filter>structs</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\structs\buffer.h">
+      <Filter>structs</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\structs\hash.h">
+      <Filter>structs</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\structs\local_db.h">
+      <Filter>structs</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\structs\round_array.h">
+      <Filter>structs</Filter>
+    </ClInclude>
+    <ClInclude Include="ax\structs\singletone.h">
+      <Filter>structs</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ax\structs\buffer.cpp">
+      <Filter>structs</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\structs\buffer_raw.cpp">
+      <Filter>structs</Filter>
+    </ClCompile>
+    <ClCompile Include="ax\structs\buffer_raw_back.cpp">
+      <Filter>structs</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

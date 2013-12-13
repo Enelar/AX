@@ -15,7 +15,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{792C27E3-863B-434C-A47A-F5F0515BFB20}</ProjectGuid>
+    <ProjectGuid>{FE587ED3-8D0D-4FF8-81B9-7AE8A293E293}</ProjectGuid>
     <RootNamespace>AX</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>
@@ -87,9 +87,6 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
     </Lib>
-    <ProjectReference>
-      <LinkLibraryDependencies>true</LinkLibraryDependencies>
-    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -113,9 +110,6 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
     </Lib>
-    <ProjectReference>
-      <LinkLibraryDependencies>true</LinkLibraryDependencies>
-    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Production|Win32'">
     <ClCompile>
@@ -144,12 +138,19 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
     </Lib>
-    <ProjectReference>
-      <LinkLibraryDependencies>true</LinkLibraryDependencies>
-    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="ax\ax" />
+    <ClInclude Include="ax\structs\array.h" />
+    <ClInclude Include="ax\structs\buffer.h" />
+    <ClInclude Include="ax\structs\hash.h" />
+    <ClInclude Include="ax\structs\local_db.h" />
+    <ClInclude Include="ax\structs\round_array.h" />
+    <ClInclude Include="ax\structs\singletone.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ax\structs\buffer.cpp" />
+    <ClCompile Include="ax\structs\buffer_raw.cpp" />
+    <ClCompile Include="ax\structs\buffer_raw_back.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="base.vcxproj">

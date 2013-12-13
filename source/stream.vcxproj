@@ -15,7 +15,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{792C27E3-863B-434C-A47A-F5F0515BFB20}</ProjectGuid>
+    <ProjectGuid>{34248289-580C-46DB-99E8-00572C7E8329}</ProjectGuid>
     <RootNamespace>AX</RootNamespace>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>
@@ -87,9 +87,6 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
     </Lib>
-    <ProjectReference>
-      <LinkLibraryDependencies>true</LinkLibraryDependencies>
-    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -113,9 +110,6 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
     </Lib>
-    <ProjectReference>
-      <LinkLibraryDependencies>true</LinkLibraryDependencies>
-    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Production|Win32'">
     <ClCompile>
@@ -144,12 +138,32 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
     </Lib>
-    <ProjectReference>
-      <LinkLibraryDependencies>true</LinkLibraryDependencies>
-    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="ax\ax" />
+    <ClInclude Include="ax\stream\abstract\abstract_duct.h" />
+    <ClInclude Include="ax\stream\abstract\abstract_pull.h" />
+    <ClInclude Include="ax\stream\abstract\abstract_push.h" />
+    <ClInclude Include="ax\stream\abstract\iendpoint.h" />
+    <ClInclude Include="ax\stream\abstract\oendpoint.h" />
+    <ClInclude Include="ax\stream\abstract\stream_base.h" />
+    <ClInclude Include="ax\stream\stream.h" />
+    <ClInclude Include="ax\stream\stream_l2n.h" />
+    <ClInclude Include="ax\stream\stream_pipe.h" />
+    <ClInclude Include="ax\stream\stream_pump.h" />
+    <ClInclude Include="ax\stream\duct.h" />
+    <ClInclude Include="ax\stream\pull.h" />
+    <ClInclude Include="ax\stream\push.h" />
+    <ClInclude Include="ax\stream\tube.h" />
+    <ClInclude Include="ax\stream\applied\pipe.h" />
+    <ClInclude Include="ax\stream\applied\pipe_constructor.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ax\stream\abstract\iendpoint.cpp" />
+    <ClCompile Include="ax\stream\abstract\oendpoint.cpp" />
+    <ClCompile Include="ax\stream\duct.cpp" />
+    <ClCompile Include="ax\stream\stream.cpp" />
+    <ClCompile Include="ax\stream\stream_pipe.cpp" />
+    <ClCompile Include="ax\stream\applied\pipe_constructor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="base.vcxproj">
