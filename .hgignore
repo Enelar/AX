@@ -1,7 +1,0 @@
-syntax: regexp
-build/*
-intermediate/*
-syntax: glob
-*.vcproj.*
-*.ncb
-AX.suo
