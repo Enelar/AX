@@ -270,6 +270,9 @@
     <ClInclude Include="ax\base\convert.h">
       <Filter>def\base</Filter>
     </ClInclude>
+    <ClInclude Include="ax\base\pragma_once_test.h">
+      <Filter>def\base</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ax\base\exceptions.cpp">
