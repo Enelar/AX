@@ -7,16 +7,20 @@
 
 using namespace ax;
 
+#pragma warning(disable: 4245) // signed/unsigned mismatch
 void ax::CheckTypes( void )
 {
   static cifra checked = 0;
 
   if (checked)
     return;
-  throw_sassert(sizeof(unsafe_byte) == 1, "Wrong byte size " TOSTRING(sizeof(unsafe_byte)) " expect 1");
-  throw_sassert(sizeof(unsafe_word) == 2, "Wrong word size: " TOSTRING(sizeof(unsafe_word)) " expect 2");
-  throw_sassert(sizeof(unsafe_dword) == 4, "Wrong dword size: " TOSTRING(sizeof(unsafe_dword)) " expect 4");
-  throw_sassert(sizeof(unsafe_bword) == 8, "Wrong bword size: " TOSTRING(sizeof(unsafe_bword)) " expect 8");
+
+  static_assert(WORD_SIZE == 4, "Wrong WORD_SIZE directive");
+  static_assert(sizeof(unsafe_byte) == 1, "Wrong byte size " TOSTRING(sizeof(unsafe_byte)) " expect 1");
+  static_assert(sizeof(unsafe_hword) == WORD_SIZE / 2, "Wrong hword size: " TOSTRING(sizeof(unsafe_hword)) " expect half of WORD_SIZE");
+  static_assert(sizeof(unsafe_word) == WORD_SIZE, "Wrong word size: " TOSTRING(sizeof(unsafe_word)) " expect equal to WORD_SIZE");
+  static_assert(sizeof(unsafe_dword) == WORD_SIZE * 2, "Wrong dword size: " TOSTRING(sizeof(unsafe_dword)) " expect twice of WORD_SIZE");
+  static_assert(sizeof(unsafe_bword) >= WORD_SIZE * 2, "Wrong bword size: " TOSTRING(sizeof(unsafe_bword)) " expect minimal twice of WORD_SIZE");
 
   unsafe_byte ub = -1;
   byte b = ub;
@@ -45,8 +49,6 @@ void ax::CheckTypes( void )
   unsafe_bigint ubi = ~0; // should test
   bigint bi = ubi;
   throw_sassert(bi == BIGINT_MAX, "Wrong max bigint value! Unbelievable! Its impossible!");
-
-  throw_sassert(sizeof(unsafe_word) == WORD_SIZE, "Sizeof word pedicted wrong");
 
   checked = 1;
 }

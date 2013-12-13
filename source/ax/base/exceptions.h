@@ -66,7 +66,7 @@ namespace ax
       : ax_exception(std::string(str), std::string(f), l)
     {
     }
-    ax_exception( ax_exception &a )
+    ax_exception( const ax_exception &a )
       : string(a.string), file(a.file), line(a.line), time(a.time)
     {
     }
@@ -80,6 +80,9 @@ namespace ax
 
     static exception_handler global_handler;
     static cut_filename global_filename_replacer;
+
+  private: REQUIRE_CPP11
+    void operator=(const ax_exception &) CPP11_ONLY(delete);
   };
 };
 
