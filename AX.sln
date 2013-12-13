@@ -10,15 +10,20 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
+		Production|Win32 = Production|Win32
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{FFF5A5BB-C564-412C-9396-7D4A9CF2B93B}.Debug|Win32.ActiveCfg = Debug|Win32
 		{FFF5A5BB-C564-412C-9396-7D4A9CF2B93B}.Debug|Win32.Build.0 = Debug|Win32
+		{FFF5A5BB-C564-412C-9396-7D4A9CF2B93B}.Production|Win32.ActiveCfg = Release|Win32
+		{FFF5A5BB-C564-412C-9396-7D4A9CF2B93B}.Production|Win32.Build.0 = Release|Win32
 		{FFF5A5BB-C564-412C-9396-7D4A9CF2B93B}.Release|Win32.ActiveCfg = Release|Win32
 		{FFF5A5BB-C564-412C-9396-7D4A9CF2B93B}.Release|Win32.Build.0 = Release|Win32
 		{792C27E3-863B-434C-A47A-F5F0515BFB20}.Debug|Win32.ActiveCfg = Debug|Win32
 		{792C27E3-863B-434C-A47A-F5F0515BFB20}.Debug|Win32.Build.0 = Debug|Win32
+		{792C27E3-863B-434C-A47A-F5F0515BFB20}.Production|Win32.ActiveCfg = Production|Win32
+		{792C27E3-863B-434C-A47A-F5F0515BFB20}.Production|Win32.Build.0 = Production|Win32
 		{792C27E3-863B-434C-A47A-F5F0515BFB20}.Release|Win32.ActiveCfg = Release|Win32
 		{792C27E3-863B-434C-A47A-F5F0515BFB20}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
