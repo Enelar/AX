@@ -3,12 +3,9 @@
  * No part of this file could be used or viewed without Develop Project agreement
  */
 
+#pragma once
 #ifndef _AX_ASSERT_H_
 #define _AX_ASSERT_H_
-
-#ifndef _AX_DEF_H_
-#error AX: Wrong assert.h include
-#endif
 
 namespace ax
 {

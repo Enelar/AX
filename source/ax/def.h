@@ -3,6 +3,7 @@
  * No part of this file could be used or viewed without Develop Project agreement
  */
 
+#pragma once
 #ifndef _AX_DEF_H_
 #define _AX_DEF_H_
 
