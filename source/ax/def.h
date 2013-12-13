@@ -7,6 +7,8 @@
 #ifndef _AX_DEF_H_
 #define _AX_DEF_H_
 
+#include "base\pragma_once_test.h"
+
 #if _DEBUG
 //! @define Is library should be compiled in debug mode
 #define _DEBUG_ 1
@@ -32,6 +34,12 @@
 #define MAYBEWRONG
 #define BEW MAYBEWRONG
 
+#ifndef NULL
+/* Please use nullptr directly */
+#define NULL    DEPRECATED nullptr
+#endif
+
+
 #define REQUIRE_CPP11
 #define REQUIRE_CPP14
 
@@ -53,14 +61,6 @@
 #define CPP14_ONLY(code) code
 #else
 #define CPP14_ONLY(code)
-#endif
-
-#ifndef NULL
-  #if CPP11_SUPPORTED
-    #define NULL    nullptr
-  #else
-    #define NULL    ((void *)0)
-  #endif
 #endif
 
 #define compile_error(message) static_assert(false, message)
