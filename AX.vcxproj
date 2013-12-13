@@ -61,16 +61,19 @@
     <CustomBuildBeforeTargets>
     </CustomBuildBeforeTargets>
     <CustomBuildAfterTargets>Compile</CustomBuildAfterTargets>
+    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(SolutionDir)..\build\$(SolutionName)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)..\intermediate\$(SolutionName)\$(Configuration)\$(ProjectName)\</IntDir>
     <TargetName>$(ProjectName)_$(Configuration)</TargetName>
+    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Production|Win32'">
     <OutDir>$(SolutionDir)..\build\$(SolutionName)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)..\intermediate\$(SolutionName)\$(Configuration)\$(ProjectName)\</IntDir>
     <TargetName>$(ProjectName)_$(Configuration)</TargetName>
+    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -100,7 +103,7 @@
       </Message>
     </CustomBuildStep>
     <PreBuildEvent>
-      <Command>"$(DevEnvDir)\WDExpress.exe" /build $(Configuration) "$(ProjectDir)AX_dependencies.sln" </Command>
+      <Command>"$(DevEnvDir)\WDExpress.exe" /build $(Configuration) "$(ProjectDir)_dep_AX.sln" /out "$(OutDir)/_dep_AX.log"</Command>
     </PreBuildEvent>
     <PreBuildEvent>
       <Message>Compile dependencies</Message>
@@ -154,7 +157,7 @@
       <Message>Build AX library depencies</Message>
     </PreLinkEvent>
     <PreBuildEvent>
-      <Command>"$(DevEnvDir)\WDExpress.exe" /build $(Configuration) "$(ProjectDir)AX_dependencies.sln" </Command>
+      <Command>"$(DevEnvDir)\WDExpress.exe" /build $(Configuration) "$(ProjectDir)_dep_AX.sln" /out "$(OutDir)/_dep_AX.log"</Command>
     </PreBuildEvent>
     <PreBuildEvent>
       <Message>Compile dependencies</Message>
@@ -195,7 +198,7 @@
       <Message>Build AX library depencies</Message>
     </PreLinkEvent>
     <PreBuildEvent>
-      <Command>"$(DevEnvDir)\WDExpress.exe" /build $(Configuration) "$(ProjectDir)AX_dependencies.sln" </Command>
+      <Command>"$(DevEnvDir)\WDExpress.exe" /build $(Configuration) "$(ProjectDir)_dep_AX.sln" /out "$(OutDir)/_dep_AX.log"</Command>
     </PreBuildEvent>
     <PreBuildEvent>
       <Message>Compile dependencies</Message>
@@ -209,13 +212,8 @@
     <None Include="ax\ax" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\fs\AX\source\base.vcxproj">
+    <ProjectReference Include="source\base.vcxproj">
       <Project>{bf6983ff-cbc7-43d6-9579-0d0ed8f61b35}</Project>
-      <Private>true</Private>
-      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
-      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
-      <LinkLibraryDependencies>true</LinkLibraryDependencies>
-      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
