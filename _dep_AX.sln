@@ -7,15 +7,24 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "base", "source\base.vcxproj
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug MD|Win32 = Debug MD|Win32
 		Debug|Win32 = Debug|Win32
+		Production MD|Win32 = Production MD|Win32
 		Production|Win32 = Production|Win32
+		Release MD|Win32 = Release MD|Win32
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF6983FF-CBC7-43D6-9579-0D0ED8F61B35}.Debug MD|Win32.ActiveCfg = Debug MD|Win32
+		{BF6983FF-CBC7-43D6-9579-0D0ED8F61B35}.Debug MD|Win32.Build.0 = Debug MD|Win32
 		{BF6983FF-CBC7-43D6-9579-0D0ED8F61B35}.Debug|Win32.ActiveCfg = Debug|Win32
 		{BF6983FF-CBC7-43D6-9579-0D0ED8F61B35}.Debug|Win32.Build.0 = Debug|Win32
+		{BF6983FF-CBC7-43D6-9579-0D0ED8F61B35}.Production MD|Win32.ActiveCfg = Production MD|Win32
+		{BF6983FF-CBC7-43D6-9579-0D0ED8F61B35}.Production MD|Win32.Build.0 = Production MD|Win32
 		{BF6983FF-CBC7-43D6-9579-0D0ED8F61B35}.Production|Win32.ActiveCfg = Production|Win32
 		{BF6983FF-CBC7-43D6-9579-0D0ED8F61B35}.Production|Win32.Build.0 = Production|Win32
+		{BF6983FF-CBC7-43D6-9579-0D0ED8F61B35}.Release MD|Win32.ActiveCfg = Release MD|Win32
+		{BF6983FF-CBC7-43D6-9579-0D0ED8F61B35}.Release MD|Win32.Build.0 = Release MD|Win32
 		{BF6983FF-CBC7-43D6-9579-0D0ED8F61B35}.Release|Win32.ActiveCfg = Release|Win32
 		{BF6983FF-CBC7-43D6-9579-0D0ED8F61B35}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
