@@ -93,32 +93,32 @@
     <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(SolutionDir)..\build\$(SolutionName)\$(Configuration)\</OutDir>
+    <OutDir>$(SolutionDir)..\build\$(SolutionName)\</OutDir>
     <IntDir>$(SolutionDir)..\intermediate\$(SolutionName)\$(Configuration)\$(ProjectName)\</IntDir>
     <TargetName>AX_$(ProjectName)_$(Configuration)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug MD|Win32'">
-    <OutDir>$(SolutionDir)..\build\$(SolutionName)\$(Configuration)\</OutDir>
+    <OutDir>$(SolutionDir)..\build\$(SolutionName)\</OutDir>
     <IntDir>$(SolutionDir)..\intermediate\$(SolutionName)\$(Configuration)\$(ProjectName)\</IntDir>
     <TargetName>AX_$(ProjectName)_$(Configuration)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(SolutionDir)..\build\$(SolutionName)\$(Configuration)\</OutDir>
+    <OutDir>$(SolutionDir)..\build\$(SolutionName)\</OutDir>
     <IntDir>$(SolutionDir)..\intermediate\$(SolutionName)\$(Configuration)\$(ProjectName)\</IntDir>
     <TargetName>AX_$(ProjectName)_$(Configuration)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release MD|Win32'">
-    <OutDir>$(SolutionDir)..\build\$(SolutionName)\$(Configuration)\</OutDir>
+    <OutDir>$(SolutionDir)..\build\$(SolutionName)\</OutDir>
     <IntDir>$(SolutionDir)..\intermediate\$(SolutionName)\$(Configuration)\$(ProjectName)\</IntDir>
     <TargetName>AX_$(ProjectName)_$(Configuration)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Production|Win32'">
-    <OutDir>$(SolutionDir)..\build\$(SolutionName)\$(Configuration)\</OutDir>
+    <OutDir>$(SolutionDir)..\build\$(SolutionName)\</OutDir>
     <IntDir>$(SolutionDir)..\intermediate\$(SolutionName)\$(Configuration)\$(ProjectName)\</IntDir>
     <TargetName>AX_$(ProjectName)_$(Configuration)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Production MD|Win32'">
-    <OutDir>$(SolutionDir)..\build\$(SolutionName)\$(Configuration)\</OutDir>
+    <OutDir>$(SolutionDir)..\build\$(SolutionName)\</OutDir>
     <IntDir>$(SolutionDir)..\intermediate\$(SolutionName)\$(Configuration)\$(ProjectName)\</IntDir>
     <TargetName>AX_$(ProjectName)_$(Configuration)</TargetName>
   </PropertyGroup>
