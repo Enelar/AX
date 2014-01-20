@@ -119,7 +119,7 @@ constexpr word operator"" GB(word a)
   template<typename type>
   type GrowId( type &a )
   {
-    if (a == GetMax(a))
+    if (a == MAXVALUEBYTYPE(type))
       a = 0;
     return ++a;
   }
