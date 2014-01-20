@@ -31,14 +31,14 @@ sst ax::StrLenSafeFast(char_t *const str, const sst buf_size)
 template<typename char_t>
 sst ax::StrMasqEq(const char_t *str, const char_t *mask)
 {
-  inline auto DummyCmp = []( char_t a, char_t b )
+  auto DummyCmp = []( char_t a, char_t b )
   {
-    inline auto ToBig = []( char_t a )
+    auto ToBig = []( char_t a ) -> char_t
     {
       if (a > 'Z')
         return a - ('a' - 'A');
       return a;
-    }
+    };
     return ToBig(a) == ToBig(b);
   };
 
