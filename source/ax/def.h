@@ -29,7 +29,7 @@
 
 #define SLOW
 #define DEPRECATED
-#define deprecated(name) __declspec(deprecated(TOSTRING(name))) name
+#define deprecated_method(name) __declspec(deprecated(TOSTRING(name))) name
 #define MEMLEAK
 #define REFACTOR
 #define MAYBEWRONG
