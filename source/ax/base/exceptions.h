@@ -81,8 +81,8 @@ namespace ax
     static exception_handler global_handler;
     static cut_filename global_filename_replacer;
 
-  private: REQUIRE_CPP11
-    void operator=(const ax_exception &) CPP11_ONLY(delete);
+   CPP11_LESS(private:)
+    void operator=(const ax_exception &) CPP11_ONLY(= delete);
   };
 };
 

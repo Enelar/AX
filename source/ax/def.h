@@ -54,14 +54,18 @@
 
 #if CPP11_SUPPORTED
 #define CPP11_ONLY(code) code
+#define CPP11_LESS(code)
 #else
 #define CPP11_ONLY(code)
+#define CPP11_LESS(code) code
 #endif
 
 #if CPP14_SUPPORTED
 #define CPP14_ONLY(code) code
+#define CPP14_LESS(code)
 #else
 #define CPP14_ONLY(code)
+#define CPP14_LESS(code)
 #endif
 
 #define compile_error(message) static_assert(false, message)
