@@ -54,16 +54,9 @@ namespace ax
   protected:
     virtual bool CallExceptionHandler( void );
   public:
-    /*/
-    DEPRECATED
-    ax_exception( const int i, const char *const f, const int l )
-    {
-      todo(Init with error code as int)
-      InitStrings(i, f);
-    } //*/
-
     ax_exception( const char *const str, const char *const f, const int l )
-      : ax_exception(std::string(str), std::string(f), l)
+      : CPP11_ONLY(ax_exception(std::string(str), std::string(f), l))
+        CPP11_LESS(DEPRECATED string(str), file(f), line(l), time(0))
     {
     }
     ax_exception( const ax_exception &a )
@@ -71,12 +64,12 @@ namespace ax
     {
     }
 
-    ~ax_exception( void );
+    ~ax_exception();
 
-    virtual const std::string &GetString( void ) const;
-    virtual const std::string &GetFile( void ) const;
-    virtual const int GetLine( void ) const;
-    virtual const int GetTime( void ) const;
+    virtual const std::string &GetString() const;
+    virtual const std::string &GetFile() const;
+    virtual const int GetLine() const;
+    virtual const int GetTime() const;
 
     static exception_handler global_handler;
     static cut_filename global_filename_replacer;
