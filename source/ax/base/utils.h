@@ -195,7 +195,7 @@ constexpr word operator"" GB(word a)
   void MemMove( void *const destination, const void *const source, const sst length );
   inline unsafe_byte GetByte( const dword a, const int byte_number )
   {
-    return (a >> (byte_number * 8)) & 255;
+    return static_cast<unsafe_byte>((a >> (byte_number * 8)) & 255);
   }
 }
 
